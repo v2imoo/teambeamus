@@ -5,4 +5,504 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/"/>
   </url>
+  <url><loc>https://teambeam.us/what-we-do</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/what-we-do"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/what-we-do"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/what-we-do"/>
+  </url>
+  <url><loc>https://teambeam.us/why-teambeam</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/why-teambeam"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/why-teambeam"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/why-teambeam"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve"/>
+  </url>
+  <url><loc>https://teambeam.us/team-experiences</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/team-experiences"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/team-experiences"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/team-experiences"/>
+  </url>
+  <url><loc>https://teambeam.us/impact-csr</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/impact-csr"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/impact-csr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/impact-csr"/>
+  </url>
+  <url><loc>https://teambeam.us/development-facilitation</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/development-facilitation"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/development-facilitation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/development-facilitation"/>
+  </url>
+  <url><loc>https://teambeam.us/offsites-retreats</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/offsites-retreats"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/offsites-retreats"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/offsites-retreats"/>
+  </url>
+  <url><loc>https://teambeam.us/beam-occasions</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/beam-occasions"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/beam-occasions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/beam-occasions"/>
+  </url>
+  <url><loc>https://teambeam.us/beam-journeys</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/beam-journeys"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/beam-journeys"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/beam-journeys"/>
+  </url>
+  <url><loc>https://teambeam.us/beam-platform</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/beam-platform"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/beam-platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/beam-platform"/>
+  </url>
+  <url><loc>https://teambeam.us/self-serve-kits</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/self-serve-kits"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/self-serve-kits"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/self-serve-kits"/>
+  </url>
+  <url><loc>https://teambeam.us/destinations</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/destinations"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/destinations"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/destinations"/>
+  </url>
+  <url><loc>https://teambeam.us/resources</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/resources"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/resources"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/resources"/>
+  </url>
+  <url><loc>https://teambeam.us/resources-tools-offsite-roi-calculator</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/resources-tools-offsite-roi-calculator"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/resources-tools-offsite-roi-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/resources-tools-offsite-roi-calculator"/>
+  </url>
+  <url><loc>https://teambeam.us/resources-tools-team-health-snapshot</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/resources-tools-team-health-snapshot"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/resources-tools-team-health-snapshot"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/resources-tools-team-health-snapshot"/>
+  </url>
+  <url><loc>https://teambeam.us/resources-tools-idea-generator</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/resources-tools-idea-generator"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/resources-tools-idea-generator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/resources-tools-idea-generator"/>
+  </url>
+  <url><loc>https://teambeam.us/about</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/about"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/about"/>
+  </url>
+  <url><loc>https://teambeam.us/careers</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/careers"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/careers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/careers"/>
+  </url>
+  <url><loc>https://teambeam.us/partnerships</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/partnerships"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/partnerships"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/partnerships"/>
+  </url>
+  <url><loc>https://teambeam.us/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/contact"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/contact"/>
+  </url>
+  <url><loc>https://teambeam.us/why-teambeam-the-method</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/why-teambeam-the-method"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/why-teambeam-the-method"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/why-teambeam-the-method"/>
+  </url>
+  <url><loc>https://teambeam.us/why-teambeam-measurement-impact</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/why-teambeam-measurement-impact"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/why-teambeam-measurement-impact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/why-teambeam-measurement-impact"/>
+  </url>
+  <url><loc>https://teambeam.us/why-teambeam-results</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/why-teambeam-results"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/why-teambeam-results"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/why-teambeam-results"/>
+  </url>
+  <url><loc>https://teambeam.us/occasions</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions"/>
+  </url>
+  <url><loc>https://teambeam.us/volunteer</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/volunteer"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/volunteer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/volunteer"/>
+  </url>
+  <url><loc>https://teambeam.us/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/privacy"/>
+  </url>
+  <url><loc>https://teambeam.us/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/terms"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/terms"/>
+  </url>
+  <url><loc>https://teambeam.us/accessibility</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/accessibility"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/accessibility"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/accessibility"/>
+  </url>
+  <url><loc>https://teambeam.us/team-experiences-beam-hunts</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/team-experiences-beam-hunts"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/team-experiences-beam-hunts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/team-experiences-beam-hunts"/>
+  </url>
+  <url><loc>https://teambeam.us/team-experiences-beam-arena</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/team-experiences-beam-arena"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/team-experiences-beam-arena"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/team-experiences-beam-arena"/>
+  </url>
+  <url><loc>https://teambeam.us/team-experiences-beam-mysteries</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/team-experiences-beam-mysteries"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/team-experiences-beam-mysteries"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/team-experiences-beam-mysteries"/>
+  </url>
+  <url><loc>https://teambeam.us/team-experiences-beam-makers</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/team-experiences-beam-makers"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/team-experiences-beam-makers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/team-experiences-beam-makers"/>
+  </url>
+  <url><loc>https://teambeam.us/team-experiences-high-action-tech</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/team-experiences-high-action-tech"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/team-experiences-high-action-tech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/team-experiences-high-action-tech"/>
+  </url>
+  <url><loc>https://teambeam.us/team-experiences-rhythm-music</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/team-experiences-rhythm-music"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/team-experiences-rhythm-music"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/team-experiences-rhythm-music"/>
+  </url>
+  <url><loc>https://teambeam.us/team-experiences-culinary</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/team-experiences-culinary"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/team-experiences-culinary"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/team-experiences-culinary"/>
+  </url>
+  <url><loc>https://teambeam.us/resources-insights</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/resources-insights"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/resources-insights"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/resources-insights"/>
+  </url>
+  <url><loc>https://teambeam.us/occasions-festival-of-lights</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-festival-of-lights"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-festival-of-lights"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-festival-of-lights"/>
+  </url>
+  <url><loc>https://teambeam.us/occasions-festival-of-colours</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-festival-of-colours"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-festival-of-colours"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-festival-of-colours"/>
+  </url>
+  <url><loc>https://teambeam.us/occasions-new-year</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-new-year"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-new-year"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-new-year"/>
+  </url>
+  <url><loc>https://teambeam.us/occasions-financial-year-close</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-financial-year-close"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-financial-year-close"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-financial-year-close"/>
+  </url>
+  <url><loc>https://teambeam.us/occasions-employee-appreciation</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-employee-appreciation"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-employee-appreciation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-employee-appreciation"/>
+  </url>
+  <url><loc>https://teambeam.us/occasions-womens-day</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-womens-day"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-womens-day"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-womens-day"/>
+  </url>
+  <url><loc>https://teambeam.us/occasions-national-days</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-national-days"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-national-days"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-national-days"/>
+  </url>
+  <url><loc>https://teambeam.us/occasions-year-end</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-year-end"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-year-end"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-year-end"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-industries-technology</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-industries-technology"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-industries-technology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-industries-technology"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-industries-financial-services</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-industries-financial-services"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-industries-financial-services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-industries-financial-services"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-industries-healthcare</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-industries-healthcare"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-industries-healthcare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-industries-healthcare"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-industries-manufacturing</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-industries-manufacturing"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-industries-manufacturing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-industries-manufacturing"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-industries-media-entertainment</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-industries-media-entertainment"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-industries-media-entertainment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-industries-media-entertainment"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-industries-professional-services</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-industries-professional-services"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-industries-professional-services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-industries-professional-services"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-industries-ecommerce-retail</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-industries-ecommerce-retail"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-industries-ecommerce-retail"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-industries-ecommerce-retail"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-industries-non-profit</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-industries-non-profit"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-industries-non-profit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-industries-non-profit"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-roles-executives</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-roles-executives"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-roles-executives"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-roles-executives"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-roles-people-hr</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-roles-people-hr"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-roles-people-hr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-roles-people-hr"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-roles-managers</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-roles-managers"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-roles-managers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-roles-managers"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-roles-chiefs-of-staff-eas</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-roles-chiefs-of-staff-eas"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-roles-chiefs-of-staff-eas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-roles-chiefs-of-staff-eas"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-roles-employees</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-roles-employees"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-roles-employees"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-roles-employees"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-moments-onboarding</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-moments-onboarding"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-moments-onboarding"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-moments-onboarding"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-moments-post-merger</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-moments-post-merger"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-moments-post-merger"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-moments-post-merger"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-moments-restructure-reset</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-moments-restructure-reset"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-moments-restructure-reset"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-moments-restructure-reset"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-moments-burnout-recovery</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-moments-burnout-recovery"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-moments-burnout-recovery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-moments-burnout-recovery"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-moments-sales-kickoff</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-moments-sales-kickoff"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-moments-sales-kickoff"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-moments-sales-kickoff"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-moments-annual-retreat</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-moments-annual-retreat"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-moments-annual-retreat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-moments-annual-retreat"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-moments-distributed-team-connection</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-moments-distributed-team-connection"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-moments-distributed-team-connection"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-moments-distributed-team-connection"/>
+  </url>
+  <url><loc>https://teambeam.us/who-we-serve-moments-milestone-anniversary</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/who-we-serve-moments-milestone-anniversary"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/who-we-serve-moments-milestone-anniversary"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/who-we-serve-moments-milestone-anniversary"/>
+  </url>
+  <url><loc>https://teambeam.us/offsites-retreats-team-programs</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/offsites-retreats-team-programs"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/offsites-retreats-team-programs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/offsites-retreats-team-programs"/>
+  </url>
+  <url><loc>https://teambeam.us/offsites-retreats-executive-experiences</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/offsites-retreats-executive-experiences"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/offsites-retreats-executive-experiences"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/offsites-retreats-executive-experiences"/>
+  </url>
+  <url><loc>https://teambeam.us/offsites-retreats-high-energy-scale</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/offsites-retreats-high-energy-scale"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/offsites-retreats-high-energy-scale"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/offsites-retreats-high-energy-scale"/>
+  </url>
+  <url><loc>https://teambeam.us/offsites-retreats-sourcing-planning</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/offsites-retreats-sourcing-planning"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/offsites-retreats-sourcing-planning"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/offsites-retreats-sourcing-planning"/>
+  </url>
+  <url><loc>https://teambeam.us/beam-platform-planning-assistant</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/beam-platform-planning-assistant"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/beam-platform-planning-assistant"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/beam-platform-planning-assistant"/>
+  </url>
+  <url><loc>https://teambeam.us/beam-platform-live-event-app</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/beam-platform-live-event-app"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/beam-platform-live-event-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/beam-platform-live-event-app"/>
+  </url>
+  <url><loc>https://teambeam.us/beam-platform-client-dashboard</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/beam-platform-client-dashboard"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/beam-platform-client-dashboard"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/beam-platform-client-dashboard"/>
+  </url>
+  <url><loc>https://teambeam.us/beam-platform-measurement</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/beam-platform-measurement"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/beam-platform-measurement"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/beam-platform-measurement"/>
+  </url>
+  <url><loc>https://teambeam.us/beam-platform-always-on</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/beam-platform-always-on"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/beam-platform-always-on"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/beam-platform-always-on"/>
+  </url>
+  <url><loc>https://teambeam.us/impact-csr-beam-green</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/impact-csr-beam-green"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/impact-csr-beam-green"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/impact-csr-beam-green"/>
+  </url>
+  <url><loc>https://teambeam.us/impact-csr-beam-builds</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/impact-csr-beam-builds"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/impact-csr-beam-builds"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/impact-csr-beam-builds"/>
+  </url>
+  <url><loc>https://teambeam.us/impact-csr-beam-community</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/impact-csr-beam-community"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/impact-csr-beam-community"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/impact-csr-beam-community"/>
+  </url>
+  <url><loc>https://teambeam.us/impact-csr-diy-impact-kits</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/impact-csr-diy-impact-kits"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/impact-csr-diy-impact-kits"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/impact-csr-diy-impact-kits"/>
+  </url>
+  <url><loc>https://teambeam.us/self-serve-kits-beam-kits</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/self-serve-kits-beam-kits"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/self-serve-kits-beam-kits"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/self-serve-kits-beam-kits"/>
+  </url>
+  <url><loc>https://teambeam.us/self-serve-kits-beam-playbook</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/self-serve-kits-beam-playbook"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/self-serve-kits-beam-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/self-serve-kits-beam-playbook"/>
+  </url>
+  <url><loc>https://teambeam.us/self-serve-kits-beam-certify</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/self-serve-kits-beam-certify"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/self-serve-kits-beam-certify"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/self-serve-kits-beam-certify"/>
+  </url>
+  <url><loc>https://teambeam.us/self-serve-kits-offsite-in-a-box</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/self-serve-kits-offsite-in-a-box"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/self-serve-kits-offsite-in-a-box"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/self-serve-kits-offsite-in-a-box"/>
+  </url>
+  <url><loc>https://teambeam.us/development-facilitation-assessment-led-development</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/development-facilitation-assessment-led-development"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/development-facilitation-assessment-led-development"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/development-facilitation-assessment-led-development"/>
+  </url>
+  <url><loc>https://teambeam.us/development-facilitation-expert-facilitation</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/development-facilitation-expert-facilitation"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/development-facilitation-expert-facilitation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/development-facilitation-expert-facilitation"/>
+  </url>
+  <url><loc>https://teambeam.us/development-facilitation-leadership-team-training</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/development-facilitation-leadership-team-training"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/development-facilitation-leadership-team-training"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/development-facilitation-leadership-team-training"/>
+  </url>
+  <url><loc>https://teambeam.us/development-facilitation-strategic-workshops</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/development-facilitation-strategic-workshops"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/development-facilitation-strategic-workshops"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/development-facilitation-strategic-workshops"/>
+  </url>
+  <url><loc>https://teambeam.us/development-facilitation-professional-excellence</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/development-facilitation-professional-excellence"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/development-facilitation-professional-excellence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/development-facilitation-professional-excellence"/>
+  </url>
+  <url><loc>https://teambeam.us/development-facilitation-guest-expert-in-residence</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/development-facilitation-guest-expert-in-residence"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/development-facilitation-guest-expert-in-residence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/development-facilitation-guest-expert-in-residence"/>
+  </url>
+  <url><loc>https://teambeam.us/destinations-india-goa</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/destinations-india-goa"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/destinations-india-goa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/destinations-india-goa"/>
+  </url>
+  <url><loc>https://teambeam.us/destinations-india-lonavala</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/destinations-india-lonavala"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/destinations-india-lonavala"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/destinations-india-lonavala"/>
+  </url>
+  <url><loc>https://teambeam.us/destinations-india-coorg</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/destinations-india-coorg"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/destinations-india-coorg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/destinations-india-coorg"/>
+  </url>
+  <url><loc>https://teambeam.us/destinations-india-udaipur</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/destinations-india-udaipur"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/destinations-india-udaipur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/destinations-india-udaipur"/>
+  </url>
+  <url><loc>https://teambeam.us/destinations-india-rishikesh</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/destinations-india-rishikesh"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/destinations-india-rishikesh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/destinations-india-rishikesh"/>
+  </url>
+  <url><loc>https://teambeam.us/destinations-india-kabini</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/destinations-india-kabini"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/destinations-india-kabini"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/destinations-india-kabini"/>
+  </url>
+  <url><loc>https://teambeam.us/destinations-india-jaipur</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/destinations-india-jaipur"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/destinations-india-jaipur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/destinations-india-jaipur"/>
+  </url>
+  <url><loc>https://teambeam.us/destinations-india-munnar</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/destinations-india-munnar"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/destinations-india-munnar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/destinations-india-munnar"/>
+  </url>
+  <url><loc>https://teambeam.us/destinations-india-alibaug</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/destinations-india-alibaug"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/destinations-india-alibaug"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/destinations-india-alibaug"/>
+  </url>
+  <url><loc>https://teambeam.us/destinations-india-mahabaleshwar</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/destinations-india-mahabaleshwar"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/destinations-india-mahabaleshwar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/destinations-india-mahabaleshwar"/>
+  </url>
+  <url><loc>https://teambeam.us/destinations-india-shimla-manali</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/destinations-india-shimla-manali"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/destinations-india-shimla-manali"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/destinations-india-shimla-manali"/>
+  </url>
+  <url><loc>https://teambeam.us/destinations-india-jim-corbett</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/destinations-india-jim-corbett"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/destinations-india-jim-corbett"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/destinations-india-jim-corbett"/>
+  </url>
 </urlset>
