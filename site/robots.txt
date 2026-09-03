@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://teambeam.us/sitemap.xml
