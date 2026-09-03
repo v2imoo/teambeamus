@@ -57,7 +57,7 @@ function orgNode(){
     address:{'@type':'PostalAddress',streetAddress:'600 California St, 11th Floor',addressLocality:'San Francisco',addressRegion:'CA',postalCode:'94108',addressCountry:'US'},
     geo:{'@type':'GeoCoordinates',latitude:CFG.geo.lat,longitude:CFG.geo.lng},
     areaServed:['United States','Worldwide'],
-    description:'TeamBeam Outings designs, delivers, and measures corporate team experiences. Diagnostic-first design and Day 14/30/60 measurement. One business, two homes — the USA and India.',
+    description:'TeamBeam Outings designs, delivers and measures corporate team experiences. Diagnostic-first design and Day 14/30/60 measurement. One business, two homes — India and the USA.',
     sameAs:[CFG.homes['in'], CFG.homes.blog, ...Object.values(CFG.social)] };
 }
 function ld(obj){const s=JSON.stringify(obj);JSON.parse(s);return `<script type="application/ld+json">${s}</script>`;}
@@ -101,9 +101,8 @@ ${p.keywords?`<meta name="keywords" content="${attr(p.keywords)}">`:''}
 <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/SpaceGrotesk.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/HankenGrotesk.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Archivo.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Fraunces.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/Mukta-R.woff2" crossorigin>
 <link rel="stylesheet" href="/assets/styles.css?v=${BUILD_ID}">
 ${ld(graph)}
 </head>
@@ -146,7 +145,6 @@ function header(){
         <span class="switch__on" aria-current="true">US</span>
       </div>
       <a class="nav__insights" href="${CFG.homes.blog}">Insights <span aria-hidden="true">&#8599;</span></a>
-      <a class="nav__cta" href="#talk"><span>Talk to us</span></a>
       <a class="cta cta--sm" href="#talk">Talk to us</a>
     </div>
     <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
@@ -169,24 +167,8 @@ function contactBits(){
   return mail + tel;
 }
 
-
-function socIcon(n){const I={
-LinkedIn:'<path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>',
-Instagram:'<path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.12 1.38A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.9 5.9 0 0 0 1.38 2.13 5.9 5.9 0 0 0 2.12 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a6.15 6.15 0 0 0 3.51-3.51c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/>',
-X:'<path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.64 7.58H.48l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93zm-1.29 19.5h2.04L6.49 3.24H4.3z"/>',
-YouTube:'<path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/>',
-Facebook:'<path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.68 4.53-4.68 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.24h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/>'};
-return `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${I[n]||''}</svg>`;}
-function footIco(n){const I={
-mail:'<rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/>',
-phone:'<path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"/>',
-pin:'<path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>'};
-return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]||''}</svg>`;}
-
 function footer(){
-  const soc = Object.entries(CFG.social).map(([n,u])=>`<a href="${attr(u)}" rel="noopener" aria-label="${esc(n)}">${socIcon(n)}</a>`).join('');
-  const tel = CFG.phone.replace(/[^+\d]/g,'');
-  const a1 = '600 California St, 11th Floor', a2 = 'San Francisco, CA 94108';
+  const soc = Object.entries(CFG.social).map(([n,u])=>`<a href="${attr(u)}" rel="noopener" aria-label="${esc(n)}">${esc(n)}</a>`).join('');
   return `</main>
 <footer class="foot">
   <div class="foot__beam" aria-hidden="true"></div>
@@ -197,12 +179,9 @@ function footer(){
   <div class="foot__grid">
     <div class="foot__brand">
       ${wordmark('brand--foot')}
-      <p class="foot__line">Corporate team experiences — designed, delivered, and measured. The USA &amp; worldwide.</p>
-      <div class="foot__contact">
-        <div class="foot__crow">${footIco('mail')}<div><span class="k">Talk to us</span><a href="mailto:${CFG.email}">${CFG.email}</a></div></div>
-        <div class="foot__crow">${footIco('phone')}<div><span class="k">Call</span><a href="tel:${tel}">${esc(CFG.phone)}</a></div></div>
-        <div class="foot__crow">${footIco('pin')}<div><span class="k">Visit</span><a href="${CFG.mapsUrl}" rel="noopener">${esc(CFG.visitName)}</a><br><a href="${CFG.mapsUrl}" rel="noopener">${a1}</a><br><a href="${CFG.mapsUrl}" rel="noopener">${a2}</a></div></div>
-      </div>
+      <p class="foot__line">Corporate team experiences — designed, delivered and measured. India &amp; worldwide.</p>
+      <p class="foot__contact"><a href="mailto:${CFG.email}">${CFG.email}</a><br><a href="tel:${CFG.phone.replace(/[^+\d]/g,'')}">${esc(CFG.phone)}</a></p>
+      <p class="foot__addr"><a href="${CFG.mapsUrl}" rel="noopener">${esc(CFG.address)}</a></p>
     </div>
     <nav class="foot__col" aria-label="Explore"><h3>Explore</h3>
       <a href="/what-we-do">What we do</a><a href="/why-teambeam">How we work</a><a href="/who-we-serve">Who it's for</a><a href="/destinations">Where we go</a><a href="/resources">Tools</a></nav>
@@ -240,226 +219,126 @@ function footer(){
 }
 
 /* ---- home ---- */
-/* ===== reusable depth helpers (used by home + inner pages) ===== */
-function secIntro(o){
-  return `<section class="lead-sec"><div class="kwrap"><span class="eyebrow">${esc(o.eyebrow||'')}</span><h2>${o.h}</h2>${o.statement?`<p class="big">${o.statement}</p>`:''}</div>${(o.paras||[]).map(p=>`<p>${p}</p>`).join('')}</section>`;
-}
-function secStages(o){
-  const items=(o.items||[]).map(it=>`<div class="stage"><span class="stage__num"></span><div><h3 class="stage__h">${it.h}</h3><p class="stage__b">${it.p}</p>${it.get?`<p class="stage__get"><b>What you get</b>${it.get}</p>`:''}</div></div>`).join('');
-  return `<section class="strip"><div class="sec-head"><span class="eyebrow">${esc(o.eyebrow||'')}</span><h2>${o.h}</h2>${o.lead?`<p class="lead">${o.lead}</p>`:''}</div><div class="stagedetail">${items}</div></section>`;
-}
-function secDimensions(o){
-  const items=(o.items||[]).map(it=>`<details><summary><span class="dimacc__h">${it.h}</span><span class="dimacc__tag">${it.tag}</span></summary><div class="dimacc__b">${it.p}</div></details>`).join('');
-  return `<section class="strip strip--tint"><div class="sec-head"><span class="eyebrow">${esc(o.eyebrow||'')}</span><h2>${o.h}</h2>${o.lead?`<p class="lead">${o.lead}</p>`:''}</div><div class="dimacc">${items}</div></section>`;
-}
-function secMeasure(o){
-  const items=(o.items||[]).map(it=>`<div class="mstep"><span class="mstep__d">${it.d}</span><h3>${it.h}</h3><p>${it.p}</p></div>`).join('');
-  return `<section class="strip"><div class="sec-head"><span class="eyebrow">${esc(o.eyebrow||'')}</span><h2>${o.h}</h2>${o.lead?`<p class="lead">${o.lead}</p>`:''}</div>${o.pre||''}<div class="measure">${items}</div>${o.post||''}</section>`;
-}
-function secSegments(o){
-  const items=(o.items||[]).map(it=>`<div class="segitem"><h3>${it.h}</h3><div><p>${it.p}</p>${it.links?`<div class="seglinks">${it.links.map(l=>`<a href="${l.href}">${l.t}</a>`).join('')}</div>`:''}</div></div>`).join('');
-  return `<section class="strip"><div class="sec-head"><span class="eyebrow">${esc(o.eyebrow||'')}</span><h2>${o.h}</h2>${o.lead?`<p class="lead">${o.lead}</p>`:''}</div><div class="seg">${items}</div></section>`;
-}
-function secDeepFAQ(o){
-  const items=(o.items||[]).map(it=>`<details><summary>${it.q}</summary><p>${it.a}</p></details>`).join('');
-  return `<section class="faqsec strip"><div class="sec-head"><span class="eyebrow">${esc(o.eyebrow||'Questions')}</span><h2>${o.h||'Questions leaders ask us.'}</h2></div><div class="faqs">${items}</div></section>`;
-}
-function secOffers(o){
-  const cards=(o.items||[]).map(it=>`<a class="offercard" href="${it.href}"><h3>${it.h}</h3><p>${it.p}</p><span>${it.link||'Explore'}</span></a>`).join('');
-  return `<section class="strip"><div class="sec-head"><span class="eyebrow">${esc(o.eyebrow||'')}</span><h2>${o.h}</h2>${o.lead?`<p class="lead">${o.lead}</p>`:''}</div><div class="offergrid">${cards}</div>${o.post||''}</section>`;
-}
-
 function homePage(){
   const nodes = [
     {'@type':'WebSite', name:'TeamBeam Outings', url:CFG.origin+'/'},
     {'@type':'FAQPage', mainEntity:[
-      {'@type':'Question',name:'What exactly does TeamBeam deliver?',acceptedAnswer:{'@type':'Answer',text:'A team day, offsite, or occasion built around a read of your specific team and measured afterward — so you get a defensible change in how the team works, not just a good photo. Depending on what the read finds, that may be a half-day session, a multi-day retreat, or a virtual experience for a distributed team.'}},
-      {'@type':'Question',name:'How is this different from a normal team-building vendor?',acceptedAnswer:{'@type':'Answer',text:'We diagnose before we design, so the day is aimed at what your team is actually missing, and we measure after, at Day 14, 30, and 60, so you can show what changed. Most vendors skip both and sell an activity; we deliver an outcome and prove it.'}},
-      {'@type':'Question',name:'Where do you run experiences?',acceptedAnswer:{'@type':'Answer',text:'In your office, in cities across the US, at national-park lodges, and fully virtual. We source venues, handle logistics and accessibility, and staff the whole thing.'}},
-      {'@type':'Question',name:'How do you measure whether it worked?',acceptedAnswer:{'@type':'Answer',text:'We read team health across eight dimensions before the experience and again at Day 14, 30, and 60, and hand you a clear before-and-after in plain language. Our scoring method stays proprietary; what you receive is easy to read and forward.'}},
-      {'@type':'Question',name:'How long does an engagement take?',acceptedAnswer:{'@type':'Answer',text:'It ranges from a single session to a multi-day retreat with a measurement tail of about two months. The read at the start is quick for your people, and the measurement afterward is light-touch by design.'}},
-      {'@type':'Question',name:'Can you support our team in India or a global capability center?',acceptedAnswer:{'@type':'Answer',text:'Yes. teambeam.in is our home in India — the same company and method, with a team on the ground. For global orgs, we help a capability center feel like one company with the rest of the business.'}},
-      {'@type':'Question',name:'We got burned by a bad offsite before. Why would this be different?',acceptedAnswer:{'@type':'Answer',text:'Because the part that usually gets skipped is the part we lead with. A bad offsite is almost always one that was never tied to a real need and never checked afterward. We start with the need and end with the proof, and the day in the middle is designed for your team specifically.'}}
+      {'@type':'Question',name:'What does TeamBeam Outings do?',acceptedAnswer:{'@type':'Answer',text:'We design, deliver and measure corporate team experiences — team days, offsites and retreats, and occasions — built around a diagnosis of what a team needs, and measured at Day 14, 30 and 60 so the change can be shown.'}},
+      {'@type':'Question',name:'How is TeamBeam different from a team-building vendor?',acceptedAnswer:{'@type':'Answer',text:'We read a team before we design for it, and we measure what changed afterwards. The result is a defensible change in how a team works, not just an enjoyable day.'}}
     ]}
   ];
-
-  const intro = secIntro({
-    eyebrow:'Start here',
-    h:'Most teams do not need another activity. They need the right one, aimed at the right thing.',
-    statement:'You own the outcome. We help you reach it — and show that you did.',
-    paras:[
-      `If you are reading this, you probably own a team outcome that a calendar invite will not fix. Maybe onboarding is slow and new hires take months to feel like they belong. Maybe two groups that have to work together do not. Maybe a hard year has left people heads-down and a little checked out, and you finally have the budget and the mandate to do something about it. The pressure is real, and so is the expectation that whatever you run will be worth the time it takes people away from their work.`,
-      `That is the moment we are built for. We are a corporate team-experience company, which is a plain way of saying we design days that bring teams together and actually move something — then we measure whether they did. We work with <a class="inlink" href="/who-we-serve">the people who carry the team</a>: People and HR leaders, founders and executives, and the managers who live with the result. The rest of this page explains how we think, what we do, and why the measurement matters more than the games.`
-    ]
-  });
-
-  const problem = secNarrative({
-    eyebrow:'The honest problem',
-    h:'You spend the budget. Everyone has a fine time. Then nothing changes.',
-    paras:[
-      `It is a familiar story. The team books an offsite, people show up, there is catering and a couple of icebreakers, and by the following Monday it is a photo album in Slack. The people who needed to talk still do not. The new hires still feel like guests. Nobody would call it a failure, exactly. It was fine. And fine is the problem, because fine is expensive and fine does not last.`,
-      `The reason has nothing to do with the quality of the activity. The activity was never tied to anything. No one asked what this specific team was missing before choosing what to do, and no one checked afterward whether the day changed how the team works. So the day floats free of the business. It was a nice break, and breaks are worth something, but a break is not what you were funded to deliver.`,
-      `There is a second failure mode that looks like the opposite. A team burned by the fluffy version swings to heavy off-the-shelf training — slide decks, a model, a facilitator reading from a manual. It feels more serious, so it feels safer. But it lands as a lecture, not an experience, and people forget it just as fast. Rigor without a human day is as forgettable as a fun day without rigor.`,
-      `Both versions fail for the same reason: the work of understanding the team, designing for it, and proving the result was skipped. That work is usually the first thing <a class="inlink" href="https://teambeam.blog/why-team-building-gets-cut-first/" rel="noopener">cut from the plan</a>, because it is the hardest part to buy. It is also the only part that makes the rest worth doing.`
-    ]
-  });
-
-  const pull = `<section class="pull"><blockquote>A good day is easy to buy. A change that holds is something you design for &mdash; and measure.</blockquote></section>`;
-
-  const data = `<section class="strip"><div class="databox"><span class="databox__n">$10T</span><div class="databox__b">Gallup now estimates that low engagement costs the world economy around <b>$10 trillion a year</b> — close to 9% of global GDP — with engagement near its lowest level in more than a decade. The number that matters to you is smaller and closer: the cost of one team that has quietly stopped pulling together. <b>That is the number we help you move.</b><span class="databox__src">Source: Gallup, State of the Global Workplace</span></div></div></section>`;
-
-  const order = secNarrative({
-    eyebrow:'A better order of operations',
-    h:'Read the team first. Then design the day. Then check that it worked.',
-    paras:[
-      `The fix is not a better activity. It is a better order of operations. Before we suggest anything, we read how your team is actually doing — where trust is thin, where communication breaks down, where people are aligned on paper but not in practice, and what the team itself says it needs. That read is quick and low-effort for your people, and it changes everything that comes after.`,
-      `Only then do we design the day, and we design it for the read. A team rebuilding trust after a reorg gets a very different day than a team that is aligned but exhausted. Same care, same craft, completely different design. We run it with facilitators who keep it useful and never force the fun, because adults can tell when they are being managed into enthusiasm.`,
-      `Then we do the part almost no one does: we come back. At <a class="inlink" href="/why-teambeam-measurement-impact">Day 14, 30, and 60</a> we read the team again and show you what moved. You end up with proof you can put in front of a board, not a feeling that it probably helped. That whole loop — read, design, deliver, measure — is <a class="inlink" href="/why-teambeam-the-method">the method</a>, and it is the reason our work holds.`
-    ]
-  });
-
-  const method = secStages({
-    eyebrow:'The method',
-    h:'Five stages, one loop: Scan, Design, Build, Deliver, Measure.',
-    lead:`Every engagement runs the same arc, whether it is a two-hour session or a three-day retreat. The scale changes; the discipline does not. You can read the method in full on <a class="inlink" href="/why-teambeam-the-method">how we work</a>.`,
-    items:[
-      {h:'Scan — read the team before anything else.',p:`We start by understanding the team you actually have, not the team on the org chart. A short diagnostic across eight dimensions of team health, plus a conversation with you about what you are trying to change, tells us where the real friction is. This is the step that keeps us honest: it stops us reaching for a favorite activity and points us at what this team is missing.`,get:`A clear read of the team and a shared definition of the outcome you want.`},
-      {h:'Design — build the day around the read.',p:`With the read in hand, we design an experience aimed at the specific thing that surfaced. Format, intensity, length, location, and facilitation all follow from the diagnosis. Nothing is chosen because it is popular; everything is chosen because it fits. When two options would work, we pick the one that leaves the team with something they can carry back to Monday.`,get:`A design proposal tied, point by point, to what the read found.`},
-      {h:'Build — turn the design into a run-ready plan.',p:`This is the production work: sourcing the venue, sequencing the day, briefing facilitators, and handling logistics, accessibility, and the hundred details that decide whether a good design becomes a good day. You see a clear plan; your people see something that simply works. We carry the operational weight so you can be a participant, not a stage manager.`,get:`A complete run sheet and a single point of contact who owns the details.`},
-      {h:'Deliver — run it well, on the day.',p:`We run the experience with facilitators who read the room and adjust in real time. The tone is calm and real — energy without pressure, structure without a script people can feel. The point is not to entertain the team for a day; it is to give them an experience that changes something small and true about how they work together.`,get:`A day your team remembers for the right reasons, and a debrief while it is fresh.`},
-      {h:'Measure — prove what changed, weeks later.',p:`The loop closes with measurement. We read the same dimensions again at Day 14, 30, and 60, so you can see what held and what needs a nudge. This is where a team experience stops being a cost line and becomes something you can defend and repeat. Proof is not a bonus at the end; it is the reason the whole thing was built this way.`,get:`An Impact view that shows the change in plain terms you can share upward.`}
-    ]
-  });
-
-  const dims = secDimensions({
-    eyebrow:'What we read',
-    h:'The eight dimensions of a healthy team.',
-    lead:`Underneath every experience is a read across eight dimensions. It is the vocabulary that turns \u201cthe team feels off\u201d into something specific enough to design for — and to measure afterward. Here is what each one means, and how it shows up when it is strong and when it is strained.`,
-    items:[
-      {h:'Trust',tag:'Can people be honest without it costing them?',p:`Trust is whether people can admit a mistake, ask for help, and disagree in the open without paying for it later. When it is strong, problems surface early and small. When it is thin, people manage impressions instead of doing the work, and issues stay hidden until they are expensive. We look at how safe it is to be wrong on your team, because almost everything else depends on the answer.`},
-      {h:'Communication',tag:'Do the important things get said, and do they land?',p:`Communication is not how much a team talks; it is whether the things that matter get said clearly and heard accurately — including the hard things. Strong communication means fewer surprises and less rework. Strained communication looks like polite meetings where the real conversation happens afterward, in smaller rooms. We look at where the signal is getting lost between what is meant and what is heard.`},
-      {h:'Alignment',tag:'Is everyone actually pointed the same way?',p:`Alignment is whether people are genuinely working toward the same outcome, not just busy in parallel. Teams often assume they are aligned because no one is arguing, when in fact they are quietly optimizing for different things. When alignment is real, trade-offs get easier and priorities stop competing. We look for the gap between the stated goal and the goals people are actually serving day to day.`},
-      {h:'Collaboration',tag:'Do people build on each other, or run in lanes?',p:`Collaboration is whether the team compounds its effort or merely divides it. Strong collaboration means people hand off cleanly, borrow each other\u2019s strengths, and treat a colleague\u2019s problem as shared. Weak collaboration looks like a set of capable individuals who happen to share a manager. We look at whether the whole is genuinely more than the sum, or just the sum with more meetings.`},
-      {h:'Decision-making',tag:'Can the team decide, and stay decided?',p:`Decision-making is whether a team can make a call, commit, and move — rather than reopening the same question every few weeks. Healthy decision-making is clear about who decides and what \u201cdecided\u201d means. Unhealthy decision-making looks like endless revisiting, quiet vetoes, and choices that never quite stick. We look at how decisions get made on your team, and how well they hold once made.`},
-      {h:'Energy',tag:'Does the team have capacity, or is it running on empty?',p:`Energy is the team\u2019s capacity to engage, not its mood on a good day. A team can be talented and aligned and still be too depleted to do its best work. When energy is healthy, people bring discretionary effort; when it is gone, they do the minimum and protect themselves. We look at where energy is being spent and drained, because you cannot design a demanding day for a team with nothing left.`},
-      {h:'Belonging',tag:'Do people feel part of the team, or adjacent to it?',p:`Belonging is whether people feel like full members of the team or guests standing near it. It is what makes new hires ramp faster and long-tenured people stay. When belonging is strong, people speak up and stick around; when it is weak, they keep one foot out the door and their best ideas to themselves. We look at who feels central and who feels peripheral, and why.`},
-      {h:'Leadership',tag:'Do the people leading create the conditions for the rest?',p:`Leadership, in this frame, is not a personality trait; it is whether the people leading create the conditions the other seven dimensions need. Good leadership makes trust safe, communication clear, and energy sustainable. Absent or anxious leadership quietly undoes all three. We look at how leadership is experienced on the ground — the felt reality, not the title — because that is what the team actually responds to.`}
-    ]
-  });
-
-  const measure = secMeasure({
-    eyebrow:'Measurement',
-    h:'Why we come back at Day 14, 30, and 60.',
-    lead:`Most team-building ends when everyone goes home. Ours does not, because a day you cannot measure is a day you cannot defend or improve. We read the team before, and then again on a deliberate schedule, so the change is visible over time rather than assumed on the day.`,
-    pre:`<p class="narrow">The timing is not arbitrary. Day 14 catches whether anything actually stuck once the glow wore off. Day 30 shows whether new behavior is becoming habit under ordinary pressure. Day 60 tells you whether the change held through a full cycle of real work. Together they turn a one-day event into a short, honest arc you can point to.</p>`,
-    items:[
-      {d:'Day 14',h:'Did it stick?',p:`Two weeks out, the event is over and normal work has resumed. We read the team again to see whether the shift we designed for is still present once the day-of energy is gone. This is the earliest honest signal, and it tells us whether anything needs reinforcing.`},
-      {d:'Day 30',h:'Is it becoming habit?',p:`A month in, the team has been through ordinary pressure — deadlines, conflict, the usual. Reading here shows whether the change is turning into a habit the team keeps on its own, or whether it only holds when someone is watching.`},
-      {d:'Day 60',h:'Did it hold?',p:`Two months out, a full cycle of real work has passed. If the change is still visible now, it is real. This is the reading you take to a board: not \u201cpeople enjoyed it,\u201d but \u201chere is what is measurably different about how this team works.\u201d`}
-    ],
-    post:`<p class="narrow">We keep the internals of how we score to ourselves, but what you receive is plain: a clear before-and-after across the eight dimensions, in language you can forward without translation. The argument for why this changes the conversation with leadership is laid out in <a class="inlink" href="/why-teambeam-measurement-impact">measurement &amp; impact</a>.</p>`
-  });
-
-  const segs = secSegments({
-    eyebrow:"Who it's for",
-    h:'Built for the people who own the result.',
-    lead:`The work flexes to the reader. A People leader, a founder, and a frontline manager each need something different from the same engagement, so we frame it three ways.`,
-    items:[
-      {h:'By role',p:`People and HR leaders come to us when they need an experience that will survive scrutiny — something they can justify to finance and defend to leadership with more than a survey smile. Founders and executives come when a team has to change quickly and there is no time for a program that might work. Managers come when they live with the day-to-day and need the team, not the theory, to shift. We speak each of these languages.`,links:[{t:'People &amp; HR',href:'/who-we-serve-roles-people-hr'},{t:'Executives',href:'/who-we-serve-roles-executives'},{t:'Managers',href:'/who-we-serve-roles-managers'}]},
-      {h:'By industry',p:`The eight dimensions are universal, but how they show up is not. A technology org scaling fast has different fault lines than a hospital system, a bank, or a manufacturer running shifts. We adapt the read and the design to the pressures of your sector — including global teams and capability centers that have to feel like one company across time zones.`,links:[{t:'Technology',href:'/who-we-serve-industries-technology'},{t:'Financial services',href:'/who-we-serve-industries-financial-services'},{t:'Healthcare',href:'/who-we-serve-industries-healthcare'},{t:'All industries',href:'/who-we-serve'}]},
-      {h:'By moment',p:`Some moments raise the stakes on team health: onboarding a wave of new hires, an offsite that has to earn its cost, a milestone worth marking, or the fragile weeks after a restructure or a merger. These are the moments where a well-designed experience pays off most, and where a generic one does the most quiet damage. We design for the moment you are in.`,links:[{t:'Onboarding',href:'/who-we-serve-moments-onboarding'},{t:'Offsites',href:'/offsites-retreats'},{t:'Restructures &amp; resets',href:'/who-we-serve-moments-restructure-reset'},{t:'All moments',href:'/who-we-serve'}]}
-    ]
-  });
-
-  const offers = secOffers({
-    eyebrow:'What we do',
-    h:'Six ways in. One method underneath.',
-    lead:`We pick the format that fits the outcome, not the other way around. Every one of these runs the same read, design, deliver, measure loop.`,
-    items:[
-      {h:'Team experiences',p:`Focused half-day and full-day experiences that build the one thing a team is missing — trust, communication, alignment, or momentum.`,href:'/team-experiences'},
-      {h:'Offsites &amp; retreats',p:`Multi-day offsites and retreats, sourced, planned, and run end to end — from a downtown hotel to a national-park lodge.`,href:'/offsites-retreats'},
-      {h:'Development &amp; facilitation',p:`Facilitated sessions and leadership work for teams that need to build a specific capability, not just spend a day together.`,href:'/development-facilitation'},
-      {h:'Impact &amp; CSR',p:`Team experiences that give back — real contribution and real connection in the same day, measured like everything else.`,href:'/impact-csr'},
-      {h:'Occasions',p:`Marking the holidays, milestones, and appreciation, inclusively and with meaning, rather than by default.`,href:'/beam-occasions'},
-      {h:'Self-serve &amp; kits',p:`When you want to run it yourself, with our design in your hands and none of the guesswork.`,href:'/self-serve-kits'}
-    ],
-    post:`<p class="narrow" style="margin-top:1.4em">However you meet — <a class="inlink" href="/delivery-modes">in your office, away together, or fully virtual</a> — the method underneath is the same.</p>`
-  });
-
-  const where = `<section class="strip strip--tint" id="where">
-    <div class="sec-head"><span class="eyebrow">Where we go</span><h2>From your office to the other side of the country &mdash; and the world.</h2>
-      <p class="lead">Place is part of the design. Sometimes the right move is a room in your own building; sometimes it is a city with room to breathe, or a national-park lodge where people finally look up from their laptops.</p></div>
-    <p class="narrow">We run experiences in your workplace, in cities across the US — <a class="inlink" href="/destinations-nyc">New York</a>, the <a class="inlink" href="/destinations-sf-bay">Bay Area</a>, and beyond — at <a class="inlink" href="/destinations-national-parks">national-park destinations</a>, and anywhere your team can gather. When your people are spread across the map, we help you choose the place that makes the most of the time you have. See the full <a class="inlink" href="/destinations">list of destinations</a>.</p>
-    <div class="chips" style="margin-top:1.4em">${CFG.destinations.slice(0,10).map(d=>`<span>${esc(d)}</span>`).join('')}<span class="chips__more">and worldwide</span></div>
-  </section>`;
-
-  const tools = `<section class="strip" id="tools">
-    <div class="sec-head"><span class="eyebrow">Tools</span><h2>Think it through before you talk to us.</h2>
-      <p class="lead">Three free tools to size the opportunity and shape the brief. No sign-up, no email wall. They live in the <a class="inlink" href="/resources">tools hub</a>.</p></div>
-    <div class="cards cards--3">
-      <a class="card" href="/resources-tools-offsite-roi-calculator"><span class="card__edge"></span><h3>ROI calculator</h3><p>Put a number on the cost of a disengaged team, and on what a measured change is worth — with a conservative, likely, and best-case view.</p><span class="card__link">Open</span></a>
-      <a class="card" href="/resources-tools-team-health-snapshot"><span class="card__edge"></span><h3>Team Health Snapshot</h3><p>A short self-check across the eight dimensions, with a maturity read and where to focus first.</p><span class="card__link">Take it</span></a>
-      <a class="card" href="/resources-tools-idea-generator"><span class="card__edge"></span><h3>Idea Generator</h3><p>A fast starting point for the kind of experience your team needs, based on what you are trying to change.</p><span class="card__link">Try it</span></a>
-    </div>
-  </section>`;
-
-  const principles = `<section class="principles" id="principles">
-    <div class="sec-head"><span class="eyebrow">About us</span><h2>The principles we hold to.</h2></div>
-    <div class="principles__grid">
-      <div class="pr"><h3>We read before we design.</h3><p>A day is only useful if it fits the team it is built for.</p></div>
-      <div class="pr"><h3>We measure what we deliver.</h3><p>The change should be something you can show, not something to take on faith.</p></div>
-      <div class="pr"><h3>We keep it honest.</h3><p>No forced fun. Calm, real, and built for grown-ups.</p></div>
-      <div class="pr"><h3>One team, wherever you are.</h3><p>The US or the other side of the world — the same practice, the same people.</p></div>
-    </div>
-  </section>`;
-
-  const ctaband = `<section class="ctaband"><div><h2>You will know it worked.</h2><p>That is the difference. Tell us what you are trying to change, and we will tell you honestly whether we can help.</p></div><a class="cta cta--amber" href="#talk">Start a conversation</a></section>`;
-  const faq = secDeepFAQ({
-    eyebrow:'Questions',
-    h:'Questions leaders ask us.',
-    items:[
-      {q:'What exactly do you deliver?',a:`A team day, offsite, or occasion built around a read of your specific team and measured afterward, so you get a defensible change in how the team works — not just a good photo. Depending on what the read finds, that might be a half-day session, a multi-day retreat, or a virtual experience for a distributed team.`},
-      {q:'How is this different from a normal team-building vendor?',a:`Two things. We diagnose before we design, so the day is aimed at what your team is actually missing. And we measure after, at Day 14, 30, and 60, so you can show what changed. Most vendors skip both and sell you an activity. We deliver an outcome and prove it.`},
-      {q:'Where do you run experiences?',a:`In your office, in cities across the US, at national-park lodges, and fully virtual. We source venues, handle logistics and accessibility, and staff the whole thing, so you can take part instead of running it. See <a class="inlink" href="/destinations">destinations</a>.`},
-      {q:'How do you measure whether it worked?',a:`We read team health across eight dimensions before the experience and again at Day 14, 30, and 60. You receive a clear before-and-after in plain language. We keep our scoring method proprietary, but what you get is easy to read and easy to forward. More on <a class="inlink" href="/why-teambeam-measurement-impact">measurement</a>.`},
-      {q:'How long does an engagement take?',a:`It ranges from a single session to a multi-day retreat with a measurement tail of about two months. The read at the start is quick and low-effort for your people; the measurement afterward is light-touch by design, so it informs you without becoming a burden.`},
-      {q:'Can you support our team in India or a global capability center?',a:`Yes. <a class="inlink" href="https://teambeam.in" rel="noopener">teambeam.in</a> is our home in India — the same company, the same method, a team on the ground there. For global orgs, we help your capability center feel like one company with the rest of the business, not a satellite.`},
-      {q:'We got burned by a bad offsite before. Why would this be different?',a:`Because the part that usually gets skipped is the part we lead with. A bad offsite is almost always one that was never tied to a real need and never checked afterward. We start with the need and end with the proof, and the day in the middle is designed for your team specifically. If we do not think we can move something, we will tell you.`}
-    ]
-  });
-
+  const off = [
+    ['Team experiences','Focused experiences that build the specific thing a team is missing — from a few hours to a full day.'],
+    ['Offsites &amp; retreats','Multi-day offsites and retreats, sourced, planned and run end to end, in India and worldwide.'],
+    ['Occasions','Marking the moments that matter — inclusively, and with meaning.'],
+    ['Delivery modes','In your office, away together, or online — designed for how your team actually works.']
+  ];
+  const who = [
+    ['By role','CXOs and boards · HR and People leaders · team and business-unit leaders.'],
+    ['By industry','Technology · financial services · healthcare · manufacturing · GCCs · and more.'],
+    ['By moment','Onboarding · offsites · milestones · restructures and resets.']
+  ];
+  const principles = [
+    ['We read before we design.','A day is only useful if it fits the team it is built for.'],
+    ['We measure what we deliver.','The change should be something you can show, not something to take on faith.'],
+    ['We keep it honest.','No forced fun. Calm, real, and built for grown-ups.'],
+    ['One team, wherever you are.','India or the other side of the world — the same practice, the same people.']
+  ];
   return head({
-    body:'home', path:'/', title:'TeamBeam Outings — corporate team experiences, designed, delivered, and measured',
-    desc:'TeamBeam Outings designs, delivers, and measures corporate team experiences across the US and worldwide — team days, offsites and retreats, and occasions, built around a read of what a team needs and measured at Day 14, 30, and 60.',
-    ai:'TeamBeam Outings is a corporate team-experience company serving the US and worldwide (with an India home at teambeam.in). It reads a team across eight dimensions, designs an experience around that read, delivers it, and measures the change at Day 14, 30, and 60.',
-    keywords:'corporate team experiences, team offsite, corporate retreat, team building measurement, team health, offsite planning US, team building companies',
+    body:'home', path:'/', title:'TeamBeam Outings — corporate team experiences, designed, delivered and measured',
+    desc:'TeamBeam Outings designs, delivers and measures corporate team experiences across India and worldwide — team days, offsites and retreats, and occasions, built around what a team needs and measured at Day 14, 30 and 60.',
+    ai:'TeamBeam Outings is a corporate team-experience company serving India and worldwide (with a US home at teambeam.us). It designs experiences around a diagnosis of a team\u2019s needs, delivers them, and measures the change at Day 14, 30 and 60.',
+    keywords:'corporate team experiences, team offsite India, team building measurement, corporate retreat, team health',
     nodes
   }) + `
   <span id="top"></span>
   <section class="hero">
-    <p class="eyebrow">Corporate team experiences for US companies</p>
-    <h1 class="hero__h">We build teams.<br>And we <span class="serif-em">prove it.</span></h1>
-    <p class="hero__sub">We design experiences around what your team actually needs, run them well, and measure what changed — at Day 14, 30, and 60. One practice, at home in the US and anywhere your people gather.</p>
-    <div class="hero__cta"><a class="cta" href="#talk">Start a conversation</a><a class="cta cta--ghost" href="/why-teambeam">See how it works</a></div>
-    <div class="spectrum">
-      <span class="spectrum__lab">We read a team across eight dimensions</span>
-      <span class="dim" style="--c:var(--d-trust)">Trust</span><span class="dim" style="--c:var(--d-comm)">Communication</span><span class="dim" style="--c:var(--d-align)">Alignment</span><span class="dim" style="--c:var(--d-collab)">Collaboration</span><span class="dim" style="--c:var(--d-decide)">Decision-making</span><span class="dim" style="--c:var(--d-energy)">Energy</span><span class="dim" style="--c:var(--d-belong)">Belonging</span><span class="dim" style="--c:var(--d-lead)">Leadership</span>
+    <p class="eyebrow">Corporate team experiences · India &amp; worldwide</p>
+    <h1 class="hero__h">We build teams.<br>And we <span class="grad">prove it.</span></h1>
+    <p class="hero__sub">We design experiences around what a team actually needs, deliver them with care, and measure what changed. One practice, at home in India and across the world.</p>
+    <div class="hero__cta"><a class="cta" href="#talk">Talk to us</a><a class="cta cta--ghost" href="/why-teambeam">How we work</a></div>
+  </section>
+
+  ${secNarrative({eyebrow:'The honest problem',h:'You spend the budget. Everyone has an okay time. Then nothing changes.',paras:[
+    'It is a familiar story. A team books an outing, people show up, there is food and a few games, and by the next week it is a photo on a group chat. The teams that needed to talk still do not talk. The new joiners still feel like guests.',
+    'The problem is not the activity. It is that the activity was never tied to anything, and nobody looked at whether it worked. So the next year you do it again, a little bigger, and hope. That is a great deal of money to spend on hope.'
+  ]})}
+
+  ${secNarrative({eyebrow:'A better order of operations',h:'Understand the team first. Then design the day. Then check it worked.',paras:[
+    'Before we suggest a single activity, we look at how your team is really doing — where trust is thin, where communication breaks, what the team itself says it needs. That reading shapes everything after.',
+    'Then we build a day around it, run it well, and come back at Day 14, 30 and 60 to see what shifted. You end up with proof, not just a good memory. That is the whole idea behind TeamBeam.'
+  ]})}
+
+  <section class="strip" id="what">
+    <div class="sec-head"><span class="eyebrow">What we do</span><h2>Experiences built around a team, not a catalogue.</h2></div>
+    <div class="cards">${off.map(([t,d])=>`<div class="card"><span class="card__edge"></span><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>
+  </section>
+
+  <section class="strip strip--tint" id="how">
+    <div class="sec-head"><span class="eyebrow">How we work</span><h2>A method, not a menu.</h2>
+      <p class="lead">We read a team before we design for it, and we measure what moved afterwards — at Day 14, 30 and 60. That is the whole difference between a good day and a change that holds.</p></div>
+    <div class="method">${['Scan','Design','Build','Deliver','Measure'].map(s=>`<span>${s}</span>`).join('')}</div>
+  </section>
+
+  ${secFeatureList({eyebrow:'What we read',h:'The eight dimensions of a healthy team.',lead:'Underneath every experience is a reading of the team across eight dimensions. It is the vocabulary that turns \u201cthe team feels off\u201d into something you can design for — and measure.',items:[
+    {h:'Trust',p:'Whether people can admit a mistake, ask for help, and disagree without it costing them.'},
+    {h:'Communication',p:'Whether the important things get said — including the hard ones — and whether they land.'},
+    {h:'Alignment',p:'Whether everyone is genuinely pointed at the same thing, not just busy.'},
+    {h:'Collaboration',p:'Whether people build on each other\u2019s work or run in parallel lanes.'},
+    {h:'Decision-making',p:'Whether the team can decide and stay decided, rather than reopening everything.'},
+    {h:'Energy',p:'Whether the team has the capacity to engage, or is running on empty.'},
+    {h:'Belonging',p:'Whether people feel part of the team or adjacent to it.'},
+    {h:'Leadership',p:'Whether the people leading create the conditions the other seven need.'}
+  ]})}
+
+  <section class="strip" id="who">
+    <div class="sec-head"><span class="eyebrow">Who it's for</span><h2>For the people who carry the team.</h2></div>
+    <div class="cards cards--3">${who.map(([t,d])=>`<div class="card"><span class="card__edge"></span><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>
+  </section>
+
+  <section class="proof" id="proof">
+    <div class="proof__in">
+      <h2>You will know it worked.</h2>
+      <p>We read team health before and after an experience, and again weeks later, so the change is something you can put in front of a board — not something you have to argue for. Proof is the point, not the postscript.</p>
     </div>
   </section>
-  ` + intro + problem + pull + data + order + method + dims + measure + ctaband + segs + offers + where + tools + principles + faq
-    + secBlog({h:'The thinking behind the method.',links:[{t:'The eight dimensions of a healthy team',href:'/the-eight-dimensions-of-a-healthy-team/'},{t:'Why measurement changes the conversation',href:'/why-measurement-changes-the-conversation/'},{t:'Why team building gets cut first',href:'/why-team-building-gets-cut-first/'}]})
-    + secUS({})
-    + secRelated({eyebrow:'Explore',h:'Where to go next.',links:[
-        {h:'How we work',p:'The method, the measurement, and the proof you can put in front of a board.',href:'/why-teambeam',linkText:'The method'},
-        {h:'What we do',p:'Six families of experience, held up by one method.',href:'/what-we-do',linkText:'All offerings'},
-        {h:"Who it's for",p:'By role, by industry, and by the moment your team is in.',href:'/who-we-serve',linkText:'See who'}
-      ]})
-    + `
+
+  <section class="strip" id="where">
+    <div class="sec-head"><span class="eyebrow">Where we go</span><h2>From your office to the other side of the world.</h2>
+      <p class="lead">We run experiences in your workplace, at destinations across India, and anywhere your team can gather.</p></div>
+    <div class="chips">${CFG.destinations.slice(0,10).map(d=>`<span>${esc(d)}</span>`).join('')}<span class="chips__more">and worldwide</span></div>
+  </section>
+
+  <section class="strip strip--tint" id="tools">
+    <div class="sec-head"><span class="eyebrow">Tools</span><h2>Think it through before you talk to us.</h2>
+      <p class="lead">A set of free tools to size the opportunity and shape the brief — an ROI view, a team-health self-check, and an idea generator. No sign-up.</p></div>
+    <div class="cards cards--3">
+      <a class="card" href="/resources-tools-offsite-roi-calculator"><span class="card__edge"></span><h3>ROI calculator</h3><p>Size the cost of a disengaged team, and what a measured change is worth.</p><span class="card__link">Open &rarr;</span></a>
+      <a class="card" href="/resources-tools-team-health-snapshot"><span class="card__edge"></span><h3>Team Health Snapshot</h3><p>A short self-check across the eight dimensions of a healthy team.</p><span class="card__link">Take it &rarr;</span></a>
+      <a class="card" href="/resources-tools-idea-generator"><span class="card__edge"></span><h3>Idea Generator</h3><p>A starting point for the kind of experience your team needs.</p><span class="card__link">Try it &rarr;</span></a>
+    </div>
+  </section>
+
+  <section class="principles" id="principles">
+    <div class="sec-head"><span class="eyebrow">About us</span><h2>The principles we hold to.</h2></div>
+    <div class="principles__grid">${principles.map(([t,d])=>`<div class="pr"><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>
+  </section>
+
+  ${secBlog({h:'The thinking behind the method.',links:[{t:'The eight dimensions of a healthy team',href:'/the-eight-dimensions-of-a-healthy-team/'},{t:'Why measurement changes the conversation',href:'/why-measurement-changes-the-conversation/'}]})}
+
+  ${secUS({})}
+
+  ${secRelated({eyebrow:'Explore',h:'Where to go next.',links:[
+    {h:'How we work',p:'The method, the measurement, and the proof you can put in front of a board.',href:'/why-teambeam',linkText:'The method'},
+    {h:'What we do',p:'Eight ways to bring a team together, held up by one method.',href:'/what-we-do',linkText:'All offerings'},
+    {h:"Who it's for",p:'By role, by industry, and by the moment your team is in.',href:'/who-we-serve',linkText:'See who'}
+  ]})}
+
   <section class="talk" id="talk">
     <div class="talk__in">
       <span class="eyebrow">Talk to us</span>
       <h2>Tell us what you're trying to change.</h2>
-      <p>Not what activity you want — what you want to be different afterward. Send us a sentence or two about the team and the outcome, and we will tell you honestly whether we can help and how we would approach it.</p>
+      <p>Not what activity you want — what you want to be different afterwards. We will take it from there.</p>
       <p class="talk__contact">${contactBits()}</p>
       <p class="talk__addr">Visit us at <a href="${CFG.mapsUrl}" rel="noopener">${esc(CFG.address)}</a></p>
       <a class="cta" href="mailto:${CFG.email}">Write to us</a>
@@ -479,7 +358,7 @@ function notFound(){
 const stripTags = s => String(s).replace(/<[^>]+>/g,'');
 function secHero(h){return `<span id="top"></span><section class="subhero"><p class="eyebrow">${esc(h.eyebrow)}</p><h1>${h.h}</h1>${h.sub?`<p class="subhero__sub">${h.sub}</p>`:''}${h.cta?`<div class="hero__cta">${h.cta}</div>`:''}</section>`;}
 function secLead(o){return `<section class="strip narrow"><p class="biglead">${o.t}</p></section>`;}
-function secCards(o){const cards=o.cards.map(c=>`<div class="card"><span class="card__edge"></span><h3>${c.h}</h3><p>${c.p}</p>${c.link?`<a class="card__link" href="${c.link}">${c.linkText||'Explore'} <span aria-hidden="true"></span></a>`:''}</div>`).join('');return `<section class="strip${o.tint?' strip--tint':''}"${o.id?` id="${o.id}"`:''}>${(o.eyebrow||o.h)?`<div class="sec-head">${o.eyebrow?`<span class="eyebrow">${esc(o.eyebrow)}</span>`:''}${o.h?`<h2>${o.h}</h2>`:''}${o.lead?`<p class="lead">${o.lead}</p>`:''}</div>`:''}<div class="cards${o.cols===3?' cards--3':''}">${cards}</div></section>`;}
+function secCards(o){const cards=o.cards.map(c=>`<div class="card"><span class="card__edge"></span><h3>${c.h}</h3><p>${c.p}</p>${c.link?`<a class="card__link" href="${c.link}">${c.linkText||'Explore'} <span aria-hidden="true">&rarr;</span></a>`:''}</div>`).join('');return `<section class="strip${o.tint?' strip--tint':''}"${o.id?` id="${o.id}"`:''}>${(o.eyebrow||o.h)?`<div class="sec-head">${o.eyebrow?`<span class="eyebrow">${esc(o.eyebrow)}</span>`:''}${o.h?`<h2>${o.h}</h2>`:''}${o.lead?`<p class="lead">${o.lead}</p>`:''}</div>`:''}<div class="cards${o.cols===3?' cards--3':''}">${cards}</div></section>`;}
 function secSteps(o){const steps=o.steps.map((s,i)=>`<div class="step"><span class="step__n">0${i+1}</span><h3>${s.h}</h3><p>${s.p}</p></div>`).join('');return `<section class="strip strip--tint"${o.id?` id="${o.id}"`:''}><div class="sec-head"><span class="eyebrow">${esc(o.eyebrow)}</span><h2>${o.h}</h2>${o.lead?`<p class="lead">${o.lead}</p>`:''}</div><div class="steps">${steps}</div></section>`;}
 function secSchedule(o){const c=o.items.map(x=>`<div class="card sched"><span class="card__edge"></span><span class="sched__day">${esc(x.day)}</span><h3>${x.h}</h3><p>${x.p}</p></div>`).join('');return `<section class="strip"${o.id?` id="${o.id}"`:''}><div class="sec-head"><span class="eyebrow">${esc(o.eyebrow)}</span><h2>${o.h}</h2>${o.lead?`<p class="lead">${o.lead}</p>`:''}</div><div class="cards cards--3">${c}</div></section>`;}
 function secProof(o){return `<section class="proof"><div class="proof__in"><h2>${o.h}</h2><p>${o.p}</p></div></section>`;}
@@ -491,9 +370,9 @@ function secNarrative(o){return `<section class="strip narrow"${o.id?` id="${o.i
 function secFeatureList(o){return `<section class="strip${o.tint?' strip--tint':''}"${o.id?` id="${o.id}"`:''}><div class="sec-head">${o.eyebrow?`<span class="eyebrow">${esc(o.eyebrow)}</span>`:''}${o.h?`<h2>${o.h}</h2>`:''}${o.lead?`<p class="lead">${o.lead}</p>`:''}</div><div class="flist">${o.items.map(it=>`<div class="fitem"><h3>${it.h}</h3><p>${it.p}</p></div>`).join('')}</div></section>`;}
 const BLOG_SLUGS=new Set(['the-leadership-team-sets-the-weather','employee-appreciation-that-lands','marking-holidays-inclusively','onboarding-at-scale-belong-faster','cxo-the-retention-math','hr-proving-roi-of-culture-spend','gccs-one-company-two-continents','technology-teams-safety-and-retention','post-merger-two-cultures-one-team','sales-teams-what-they-actually-need','why-measurement-changes-the-conversation','what-day-14-30-60-tells-you','diagnostic-first-design-follows-evidence','the-eight-dimensions-of-a-healthy-team','trust-inside-a-team','human-layer-becomes-the-differentiator','what-ai-changes-about-team-work']);
 function blogFix(href){ if(typeof href==='string'){ const s=href.replace(/^\//,'').replace(/\/$/,''); if(BLOG_SLUGS.has(s)) return CFG.homes.blog+'/'+s+'/'; } return href; }
-function secRelated(o){return `<section class="strip related"><div class="sec-head"><span class="eyebrow">${esc(o.eyebrow||'Keep reading')}</span>${o.h?`<h2>${o.h}</h2>`:''}</div><div class="cards cards--3">${o.links.map(l=>`<a class="card" href="${blogFix(l.href)}"><span class="card__edge"></span><h3>${l.h}</h3><p>${l.p}</p><span class="card__link">${l.linkText||'Explore'}</span></a>`).join('')}</div></section>`;}
+function secRelated(o){return `<section class="strip related"><div class="sec-head"><span class="eyebrow">${esc(o.eyebrow||'Keep reading')}</span>${o.h?`<h2>${o.h}</h2>`:''}</div><div class="cards cards--3">${o.links.map(l=>`<a class="card" href="${blogFix(l.href)}"><span class="card__edge"></span><h3>${l.h}</h3><p>${l.p}</p><span class="card__link">${l.linkText||'Explore'} &rarr;</span></a>`).join('')}</div></section>`;}
 function secPull(o){return `<section class="strip"><blockquote class="pull">${o.quote}${o.cite?`<cite>${esc(o.cite)}</cite>`:''}</blockquote></section>`;}
-function secUS(o){return `<section class="strip"><a class="xmodule xmodule--in" href="${CFG.homes['in']}"><span class="xmodule__eyebrow">Team in India, or a global capability center there?</span><span class="xmodule__h">${o.h||'teambeam.in is our home there — one company, two continents, one method.'}</span><span class="xmodule__go">Visit the India site <span aria-hidden="true"></span></span></a></section>`;}
+function secUS(o){return `<section class="strip"><a class="xmodule xmodule--us" href="${CFG.homes['in']}"><span class="xmodule__eyebrow">Team in India, or a capability center there?</span><span class="xmodule__h">${o.h||'teambeam.in is our home there — one company, two continents, one method.'}</span><span class="xmodule__go">Visit the India site &rarr;</span></a></section>`;}
 function secBlog(o){const links=(o.links||[]).map(l=>`<a class="xmodule__link" href="${CFG.homes.blog}${l.href}">${esc(l.t)} <span aria-hidden="true">&#8599;</span></a>`).join('');return `<section class="strip"><div class="xmodule xmodule--blog"><div><span class="xmodule__eyebrow">Insights</span><span class="xmodule__h">${o.h||'The thinking behind the method.'}</span>${links?`<div class="xmodule__links">${links}</div>`:''}</div><a class="cta cta--ghost" href="${CFG.homes.blog}">Read the insights &#8599;</a></div></section>`;}
 const R={hero:secHero,lead:secLead,cards:secCards,steps:secSteps,schedule:secSchedule,proof:secProof,faq:secFaq,cta:secCTA,raw:secRaw,prose:secProse,narrative:secNarrative,featurelist:secFeatureList,related:secRelated,pull:secPull,usmodule:secUS,blogmodule:secBlog};
 function renderPage(p){
@@ -994,7 +873,7 @@ const IDEA = `
     var mode=document.getElementById('idea-mode').value, goal=document.getElementById('idea-goal').value, n=+document.getElementById('idea-size').value||0;
     var o=OFF[goal]||OFF.reenergise;
     var second = mode==='away' ? ['Offsites & Retreats','/offsites-retreats','Since you are going away, we can handle the whole offsite — venue, travel and run-of-show.'] : ['How we measure','/why-teambeam','Whatever we run, we read the team first and measure the change at Day 14, 30 and 60.'];
-    function card(t,l,p){return '<a class="card" href="'+l+'"><span class="card__edge"></span><h3>'+t+'</h3><p>'+p+'</p><span class="card__link">Explore</span></a>';}
+    function card(t,l,p){return '<a class="card" href="'+l+'"><span class="card__edge"></span><h3>'+t+'</h3><p>'+p+'</p><span class="card__link">Explore &rarr;</span></a>';}
     out.innerHTML='<p class="tool__read">For a team of about '+n+', we\\u2019d '+MODE[mode]+'</p>'+
       '<div class="cards cards--3">'+card(o[0],o[1],o[2])+card(second[0],second[1],second[2])+'</div>'+
       '<div class="hero__cta"><a class="cta" href="mailto:${CFG.email}">Talk to us about this</a></div>';
@@ -3049,5 +2928,4 @@ function run(){
   if(errors.length){console.error(errors.join('\n'));process.exit(1);}
   console.log('Build OK -> /site');
 }
-PAGES.length = 0;
 run();
