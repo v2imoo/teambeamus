@@ -57,7 +57,7 @@ function orgNode(){
     address:{'@type':'PostalAddress',streetAddress:'600 California St, 11th Floor',addressLocality:'San Francisco',addressRegion:'CA',postalCode:'94108',addressCountry:'US'},
     geo:{'@type':'GeoCoordinates',latitude:CFG.geo.lat,longitude:CFG.geo.lng},
     areaServed:['United States','Worldwide'],
-    description:'TeamBeam Outings designs, delivers and measures corporate team experiences. Diagnostic-first design and Day 14/30/60 measurement. One business, two homes — India and the USA.',
+    description:'TeamBeam Outings designs, delivers and measures corporate team experiences. Diagnostic-first design and Day 14/30/60 measurement. One business, two homes — the USA and India.',
     sameAs:[CFG.homes['in'], CFG.homes.blog, ...Object.values(CFG.social)] };
 }
 function ld(obj){const s=JSON.stringify(obj);JSON.parse(s);return `<script type="application/ld+json">${s}</script>`;}
@@ -179,7 +179,7 @@ function footer(){
   <div class="foot__grid">
     <div class="foot__brand">
       ${wordmark('brand--foot')}
-      <p class="foot__line">Corporate team experiences — designed, delivered and measured. India &amp; worldwide.</p>
+      <p class="foot__line">Corporate team experiences — designed, delivered and measured. The USA &amp; worldwide.</p>
       <p class="foot__contact"><a href="mailto:${CFG.email}">${CFG.email}</a><br><a href="tel:${CFG.phone.replace(/[^+\d]/g,'')}">${esc(CFG.phone)}</a></p>
       <p class="foot__addr"><a href="${CFG.mapsUrl}" rel="noopener">${esc(CFG.address)}</a></p>
     </div>
@@ -229,7 +229,7 @@ function homePage(){
   ];
   const off = [
     ['Team experiences','Focused experiences that build the specific thing a team is missing — from a few hours to a full day.'],
-    ['Offsites &amp; retreats','Multi-day offsites and retreats, sourced, planned and run end to end, in India and worldwide.'],
+    ['Offsites &amp; retreats','Multi-day offsites and retreats, sourced, planned and run end to end, in the USA and worldwide.'],
     ['Occasions','Marking the moments that matter — inclusively, and with meaning.'],
     ['Delivery modes','In your office, away together, or online — designed for how your team actually works.']
   ];
@@ -242,20 +242,20 @@ function homePage(){
     ['We read before we design.','A day is only useful if it fits the team it is built for.'],
     ['We measure what we deliver.','The change should be something you can show, not something to take on faith.'],
     ['We keep it honest.','No forced fun. Calm, real, and built for grown-ups.'],
-    ['One team, wherever you are.','India or the other side of the world — the same practice, the same people.']
+    ['One team, wherever you are.','The USA or the other side of the world — the same practice, the same people.']
   ];
   return head({
     body:'home', path:'/', title:'TeamBeam Outings — corporate team experiences, designed, delivered and measured',
-    desc:'TeamBeam Outings designs, delivers and measures corporate team experiences across India and worldwide — team days, offsites and retreats, and occasions, built around what a team needs and measured at Day 14, 30 and 60.',
-    ai:'TeamBeam Outings is a corporate team-experience company serving India and worldwide (with a US home at teambeam.us). It designs experiences around a diagnosis of a team\u2019s needs, delivers them, and measures the change at Day 14, 30 and 60.',
-    keywords:'corporate team experiences, team offsite India, team building measurement, corporate retreat, team health',
+    desc:'TeamBeam Outings designs, delivers and measures corporate team experiences across the US and worldwide — team days, offsites and retreats, and occasions, built around what a team needs and measured at Day 14, 30 and 60.',
+    ai:'TeamBeam Outings is a corporate team-experience company serving the USA and worldwide (with an India home at teambeam.in). It designs experiences around a diagnosis of a team\u2019s needs, delivers them, and measures the change at Day 14, 30 and 60.',
+    keywords:'corporate team experiences, team offsite USA, team building measurement, corporate retreat, team health',
     nodes
   }) + `
   <span id="top"></span>
   <section class="hero">
-    <p class="eyebrow">Corporate team experiences · India &amp; worldwide</p>
+    <p class="eyebrow">Corporate team experiences · The USA &amp; worldwide</p>
     <h1 class="hero__h">We build teams.<br>And we <span class="grad">prove it.</span></h1>
-    <p class="hero__sub">We design experiences around what a team actually needs, deliver them with care, and measure what changed. One practice, at home in India and across the world.</p>
+    <p class="hero__sub">We design experiences around what a team actually needs, deliver them with care, and measure what changed. One practice, at home in the US and across the world.</p>
     <div class="hero__cta"><a class="cta" href="#talk">Talk to us</a><a class="cta cta--ghost" href="/why-teambeam">How we work</a></div>
   </section>
 
@@ -270,7 +270,7 @@ function homePage(){
   ]})}
 
   <section class="strip" id="what">
-    <div class="sec-head"><span class="eyebrow">What we do</span><h2>Experiences built around a team, not a catalogue.</h2></div>
+    <div class="sec-head"><span class="eyebrow">What we do</span><h2>Experiences built around a team, not a catalog.</h2></div>
     <div class="cards">${off.map(([t,d])=>`<div class="card"><span class="card__edge"></span><h3>${t}</h3><p>${d}</p></div>`).join('')}</div>
   </section>
 
@@ -305,7 +305,7 @@ function homePage(){
 
   <section class="strip" id="where">
     <div class="sec-head"><span class="eyebrow">Where we go</span><h2>From your office to the other side of the world.</h2>
-      <p class="lead">We run experiences in your workplace, at destinations across India, and anywhere your team can gather.</p></div>
+      <p class="lead">We run experiences in your workplace, at destinations across the US, and anywhere your team can gather.</p></div>
     <div class="chips">${CFG.destinations.slice(0,10).map(d=>`<span>${esc(d)}</span>`).join('')}<span class="chips__more">and worldwide</span></div>
   </section>
 
@@ -372,7 +372,7 @@ const BLOG_SLUGS=new Set(['the-leadership-team-sets-the-weather','employee-appre
 function blogFix(href){ if(typeof href==='string'){ const s=href.replace(/^\//,'').replace(/\/$/,''); if(BLOG_SLUGS.has(s)) return CFG.homes.blog+'/'+s+'/'; } return href; }
 function secRelated(o){return `<section class="strip related"><div class="sec-head"><span class="eyebrow">${esc(o.eyebrow||'Keep reading')}</span>${o.h?`<h2>${o.h}</h2>`:''}</div><div class="cards cards--3">${o.links.map(l=>`<a class="card" href="${blogFix(l.href)}"><span class="card__edge"></span><h3>${l.h}</h3><p>${l.p}</p><span class="card__link">${l.linkText||'Explore'} &rarr;</span></a>`).join('')}</div></section>`;}
 function secPull(o){return `<section class="strip"><blockquote class="pull">${o.quote}${o.cite?`<cite>${esc(o.cite)}</cite>`:''}</blockquote></section>`;}
-function secUS(o){return `<section class="strip"><a class="xmodule xmodule--us" href="${CFG.homes['in']}"><span class="xmodule__eyebrow">Team in India, or a capability center there?</span><span class="xmodule__h">${o.h||'teambeam.in is our home there — one company, two continents, one method.'}</span><span class="xmodule__go">Visit the India site &rarr;</span></a></section>`;}
+function secUS(o){return `<section class="strip"><a class="xmodule xmodule--us" href="${CFG.homes['in']}"><span class="xmodule__eyebrow">Team in USA, or a capability center there?</span><span class="xmodule__h">${o.h||'teambeam.in is our home there — one company, two continents, one method.'}</span><span class="xmodule__go">Visit the India site &rarr;</span></a></section>`;}
 function secBlog(o){const links=(o.links||[]).map(l=>`<a class="xmodule__link" href="${CFG.homes.blog}${l.href}">${esc(l.t)} <span aria-hidden="true">&#8599;</span></a>`).join('');return `<section class="strip"><div class="xmodule xmodule--blog"><div><span class="xmodule__eyebrow">Insights</span><span class="xmodule__h">${o.h||'The thinking behind the method.'}</span>${links?`<div class="xmodule__links">${links}</div>`:''}</div><a class="cta cta--ghost" href="${CFG.homes.blog}">Read the insights &#8599;</a></div></section>`;}
 const R={hero:secHero,lead:secLead,cards:secCards,steps:secSteps,schedule:secSchedule,proof:secProof,faq:secFaq,cta:secCTA,raw:secRaw,prose:secProse,narrative:secNarrative,featurelist:secFeatureList,related:secRelated,pull:secPull,usmodule:secUS,blogmodule:secBlog};
 function renderPage(p){
@@ -391,7 +391,7 @@ const PAGES = [
   title:'What we do — team experiences, offsites & development · TeamBeam Outings',
   desc:'From team experiences and offsites to CSR, development and self-serve kits — every format TeamBeam runs, held together by one measured method.',
   ai:'TeamBeam Outings offers team experiences, impact & CSR, development & facilitation, offsites & retreats, occasions, and self-serve kits — all designed around a diagnosis and measured at Day 14/30/60.',
-  keywords:'corporate team experiences, offsites, CSR, facilitation, team building India',
+  keywords:'corporate team experiences, offsites, CSR, facilitation, team building USA',
   sections:[
     {type:'hero', eyebrow:'What we do', h:'Eight ways to bring a team together. <span class="grad">One method holding them up.</span>',
       sub:'From a two-hour game show to a three-day leadership retreat to a give-back project for your CSR mandate — every format is built around a real goal and checked afterwards.',
@@ -403,7 +403,7 @@ const PAGES = [
         {h:'Development &amp; Facilitation',p:'Turn a good day into a better team, led by facilitators who read the room.',link:'/development-facilitation'},
         {h:'Offsites &amp; Retreats',p:'The whole offsite handled — venue, travel, experiences, debrief.',link:'/offsites-retreats'},
         {h:'Beam Occasions',p:'Mark the moments that matter, in a way people actually enjoy.',link:'/beam-occasions'},
-        {h:'Beam Journeys',p:'Explore India together, with the experience built into the trip.',link:'/beam-journeys'},
+        {h:'Beam Journeys',p:'Explore new places together, with the experience built into the trip.',link:'/beam-journeys'},
         {h:'The Beam Platform',p:'The tech that runs the day — and the proof that it worked.',link:'/beam-platform'},
         {h:'Self-Serve &amp; Kits',p:'Our design, your hands — kits, playbooks and facilitator certification.',link:'/self-serve-kits'}
       ]},
@@ -450,7 +450,7 @@ const PAGES = [
     {type:'faq', h:'Things people ask', items:[
       {q:'What does the measurement involve for our people?',a:'Short, light check-ins — a few minutes each at Day 14, 30 and 60. We keep it simple so people actually respond, and you get a clear report at the end.'},
       {q:'Is this just a survey?',a:'No. The reading before the event shapes the design, and the follow-up tracks whether specific things changed. The point is a decision you can act on, not a satisfaction score.'},
-      {q:'Do you work outside Pune?',a:'Yes. We are based in Pune and run across the major hubs — Bengaluru, Hyderabad, Mumbai, Chennai, Delhi NCR and more — plus offsites anywhere in India and abroad.'}
+      {q:'Do you work outside San Francisco?',a:'Yes. We are based in San Francisco and run across the major US hubs — New York, Chicago, Austin, Boston, Seattle, Denver and more — plus offsites anywhere in the US and abroad.'}
     ]},
     {type:'cta', h:'Tell us what you\u2019re trying to change.', p:'Not the activity — what you want to be different afterwards.',
       cta:talkCTA}
@@ -461,9 +461,9 @@ const PAGES = [
   title:"Who it's for — roles, industries & moments · TeamBeam Outings",
   desc:'From GCCs and IT to banks and factories, from CHROs to people managers, from onboarding to reorgs — TeamBeam maps to your team, your role and your moment.',
   ai:'TeamBeam serves teams by role (CXO, HR/People, L&D, managers, chiefs of staff, BU leaders), by industry (technology & GCCs, financial services, healthcare, manufacturing, retail, professional services), and by moment (onboarding, burnout recovery, restructure, kickoff, milestones, post-merger).',
-  keywords:'team building for GCCs, HR team building India, industry team experiences, onboarding, offsite India',
+  keywords:'team building for GCCs, HR team building USA, industry team experiences, onboarding, offsite USA',
   sections:[
-    {type:'hero', eyebrow:"Who it's for", h:"Built for India's teams — <span class=\"grad\">whatever shape you're in.</span>",
+    {type:'hero', eyebrow:"Who it's for", h:"Built for your team — <span class=\"grad\">whatever shape it's in.</span>",
       sub:'Large in-office teams, hybrid setups, fast-growing startups, teams that just merged or just lost half their people to attrition. Whatever your situation, there is a starting point that fits.',
       cta:`<a class="cta" href="#talk">Talk to us</a><a class="cta cta--ghost" href="/what-we-do">What we do</a>`},
     {type:'cards', id:'roles', eyebrow:'By role', h:'A plan that fits the goal you own.', cols:3,
@@ -476,9 +476,9 @@ const PAGES = [
         {h:'Employees',p:'A day that respects your people and is genuinely worth their time.',link:'/who-we-serve-roles-employees',linkText:'Explore'}
       ]},
     {type:'cards', id:'industries', tint:true, eyebrow:'By industry', h:'Every sector has its own pressures.', cols:3,
-      lead:'We have built for teams across the sectors that define India\u2019s workforce — each with its own shape and its own stakes.',
+      lead:'We have built for teams across the sectors that define the US workforce — each with its own shape and its own stakes.',
       cards:[
-        {h:'Technology &amp; GCCs',p:'High-talent, high-mobility teams, and centres that must feel like one company across two continents.',link:'/who-we-serve-industries-technology',linkText:'Explore'},
+        {h:'Technology &amp; GCCs',p:'High-talent, high-mobility teams, and centers that must feel like one company across two continents.',link:'/who-we-serve-industries-technology',linkText:'Explore'},
         {h:'Financial services',p:'High-stakes, high-pressure teams where trust and clear decisions matter most.',link:'/who-we-serve-industries-financial-services',linkText:'Explore'},
         {h:'Healthcare &amp; life sciences',p:'Teams carrying real weight, who need genuine recovery — not just a day off.',link:'/who-we-serve-industries-healthcare',linkText:'Explore'},
         {h:'Manufacturing',p:'Large, layered teams across shifts and sites, brought together with purpose.',link:'/who-we-serve-industries-manufacturing',linkText:'Explore'},
@@ -517,7 +517,7 @@ offering({path:'/team-experiences', crumb:'Team Experiences',
   title:'Team Experiences — hunts, game shows, makers & more · TeamBeam Outings',
   desc:'Genuinely fun team experiences — hunts, game shows, mysteries, makers, music and more — each built around a real goal underneath the fun.',
   ai:'TeamBeam team experiences include hunts, game shows, mysteries, maker sessions, high-action and tech, music, and culinary formats, all designed around a team goal and measured afterwards.',
-  keywords:'team building activities India, corporate game show, treasure hunt, team experiences',
+  keywords:'team building activities USA, corporate game show, treasure hunt, team experiences',
   eyebrow:'Team Experiences', h:'Genuinely fun. <span class="grad">Quietly designed.</span>',
   sub:'The kind of day people actually talk about — with a real goal working underneath the fun.',
   cardsH:'Ways to bring a team together',
@@ -534,7 +534,7 @@ offering({path:'/impact-csr', crumb:'Impact & CSR',
   title:'Impact & CSR — give back together, file the report · TeamBeam Outings',
   desc:'Do real good as a team, meet your CSR mandate, and get an Impact Report your CSR and ESG teams can file.',
   ai:'TeamBeam Impact & CSR experiences let teams give back through environmental, build and community projects, and produce a filable CSR/ESG impact report.',
-  keywords:'corporate CSR activities India, team volunteering, CSR mandate, ESG report',
+  keywords:'corporate CSR activities USA, team volunteering, CSR mandate, ESG report',
   eyebrow:'Impact & CSR', h:'Give back together. <span class="grad">And file the report.</span>',
   sub:'Do real good as a team, meet your CSR mandate, and walk away with a report your CSR and ESG teams can file.',
   cardsH:'Ways to give back',
@@ -548,7 +548,7 @@ offering({path:'/development-facilitation', crumb:'Development & Facilitation',
   title:'Development & Facilitation — turn a good day into a better team · TeamBeam Outings',
   desc:'Facilitator-led development that connects to a real gap — leadership team training, strategic workshops and more.',
   ai:'TeamBeam development and facilitation includes assessment-led development, expert facilitation, leadership team training, strategic workshops and guest experts, tied to a diagnosed gap.',
-  keywords:'team facilitation India, leadership team training, strategic offsite, development workshop',
+  keywords:'team facilitation USA, leadership team training, strategic offsite, development workshop',
   eyebrow:'Development & Facilitation', h:'Turn a good day <span class="grad">into a better team.</span>',
   sub:'Led by facilitators who read the room — development that connects to a real gap, not a generic workshop.',
   cardsH:'Ways to develop a team',
@@ -562,9 +562,9 @@ offering({path:'/development-facilitation', crumb:'Development & Facilitation',
   ]}),
 offering({path:'/offsites-retreats', crumb:'Offsites & Retreats',
   title:'Offsites & Retreats — the whole offsite, handled · TeamBeam Outings',
-  desc:'Multi-day offsites and retreats — venue, travel, experiences and debrief, planned and run end to end across India and worldwide.',
+  desc:'Multi-day offsites and retreats — venue, travel, experiences and debrief, planned and run end to end across the US and worldwide.',
   ai:'TeamBeam plans and runs offsites and retreats end to end — venue, travel, experiences and debrief — for team programs, executive groups, and large-scale events.',
-  keywords:'corporate offsite India, team retreat, offsite planning, executive retreat',
+  keywords:'corporate offsite USA, team retreat, offsite planning, executive retreat',
   eyebrow:'Offsites & Retreats', h:'The whole offsite, <span class="grad">handled.</span>',
   sub:'Venue, travel, experiences and debrief — planned and run end to end, so you can be present with your team instead of managing logistics.',
   cardsH:'Ways we run an offsite',
@@ -577,8 +577,8 @@ offering({path:'/offsites-retreats', crumb:'Offsites & Retreats',
 offering({path:'/beam-occasions', crumb:'Beam Occasions',
   title:'Beam Occasions — mark the moments that matter · TeamBeam Outings',
   desc:'A year-round calendar of reasons to bring people together — from new-year resets to year-end celebrations — framed so everyone feels included.',
-  ai:'TeamBeam Occasions mark the moments that matter across the year — festivals, appreciation, milestones, new year and year-end — inclusively and secularly, tuned by audience and delivery mode.',
-  keywords:'corporate celebrations India, employee appreciation, festival celebration at work, occasions',
+  ai:'TeamBeam Occasions mark the moments that matter across the year — the holidays, appreciation, milestones, new year and year-end — inclusively and secularly, tuned by audience and delivery mode.',
+  keywords:'corporate celebrations USA, employee appreciation, holiday celebration at work, occasions',
   eyebrow:'Beam Occasions', h:'Mark the moments <span class="grad">that matter.</span>',
   sub:'A year-round calendar of reasons to bring people together — framed so everyone feels included, and run so it means something.',
   cardsH:'Occasions across the year',
@@ -595,11 +595,11 @@ offering({path:'/beam-occasions', crumb:'Beam Occasions',
     {h:'Year-end',p:'Close the year with a gathering that actually feels earned.',link:'/occasions-year-end',linkText:'Explore'}
   ]}),
 offering({path:'/beam-journeys', crumb:'Beam Journeys',
-  title:'Beam Journeys — explore India together · TeamBeam Outings',
-  desc:'Team travel where the journey itself does the work — designed trips across India that bring a team closer.',
-  ai:'TeamBeam Journeys are designed team trips across India where travel and shared experience build the team, from signature routes to wilderness and heritage.',
-  keywords:'team trip India, corporate travel, team journey, India offsite destinations',
-  eyebrow:'Beam Journeys', h:'Explore India together — <span class="grad">with the experience built in.</span>',
+  title:'Beam Journeys — explore together · TeamBeam Outings',
+  desc:'Team travel where the journey itself does the work — designed trips across the US and beyond that bring a team closer.',
+  ai:'TeamBeam Journeys are designed team trips across the US and beyond where travel and shared experience build the team, from signature routes to wilderness and heritage.',
+  keywords:'team trip USA, corporate travel, team journey, US offsite destinations',
+  eyebrow:'Beam Journeys', h:'Explore together — <span class="grad">with the experience built in.</span>',
   sub:'Team travel where the journey itself does the work — designed trips that bring a team closer while they see somewhere new.',
   cardsH:'Ways to journey together',
   cards:[
@@ -755,7 +755,7 @@ PAGES.push(
   title:'Tools — size the opportunity before you talk to us · TeamBeam Outings',
   desc:'Free tools to size the opportunity and shape the brief — an ROI calculator, a team-health self-check, and an idea generator.',
   ai:'TeamBeam offers free planning tools: an ROI calculator that sizes the cost of disengagement and attrition, a Team Health Snapshot self-check across eight dimensions, and an Idea Generator.',
-  keywords:'team building ROI calculator, team health check, offsite idea generator, HR tools India',
+  keywords:'team building ROI calculator, team health check, offsite idea generator, HR tools USA',
   sections:[
     {type:'hero', eyebrow:'Tools', h:'Think it through <span class="grad">before you talk to us.</span>',
       sub:'A few tools to size the opportunity and shape the brief. Free, and no sign-up.',
@@ -775,7 +775,7 @@ PAGES.push(
   title:'Team ROI calculator — the cost of a disengaged team · TeamBeam Outings',
   desc:'A free calculator that sizes the annual cost of disengagement and attrition on your team, and what a measured improvement could be worth.',
   ai:'The TeamBeam ROI calculator estimates the annual cost of disengagement and regretted attrition for a team, using transparent adjustable assumptions, and shows the potential value of a measured improvement and the break-even on an investment.',
-  keywords:'team building ROI calculator India, cost of employee disengagement, attrition cost calculator, offsite ROI',
+  keywords:'team building ROI calculator USA, cost of employee disengagement, attrition cost calculator, offsite ROI',
   sections:[
     {type:'hero', eyebrow:'Tools · ROI calculator', h:'What is a disengaged team <span class="grad">actually costing you?</span>',
       sub:'Put in a few numbers and see the annual cost of disengagement and attrition — and what recovering even part of it is worth. Everything updates as you type.'},
@@ -797,7 +797,7 @@ const DIMS=[
   ['Decision-making',['We make decisions, and they stay made.','It is clear who decides what, so decisions do not stall.']],
   ['Energy',['The team has the capacity to take on what is in front of it.','People are not running on empty or quietly heading for burnout.']],
   ['Belonging',['Everyone feels part of the team, not adjacent to it.','New and quieter voices are heard, not just the loudest few.']],
-  ['Leadership',['The people leading create the conditions for the rest to do their best work.','Leaders model the honesty and behaviour they ask for.']]
+  ['Leadership',['The people leading create the conditions for the rest to do their best work.','Leaders model the honesty and behavior they ask for.']]
 ];
 const DIMLINK={Trust:'/trust-inside-a-team/',Belonging:'/onboarding-at-scale-belong-faster/',Leadership:'/the-leadership-team-sets-the-weather/'};
 const DIMGUIDE={
@@ -885,7 +885,7 @@ PAGES.push(
   title:'Team Health Snapshot — a quick eight-dimension self-check · TeamBeam Outings',
   desc:'A short, free self-check across the eight dimensions of a healthy team — trust, communication, alignment and more — that shows the one to focus on first.',
   ai:'The TeamBeam Team Health Snapshot is a quick self-assessment across eight dimensions (trust, communication, alignment, collaboration, decision-making, energy, belonging, leadership) that highlights a team\u2019s strongest dimension and the one to focus on.',
-  keywords:'team health check, team assessment, eight dimensions of a team, team self-assessment India',
+  keywords:'team health check, team assessment, eight dimensions of a team, team self-assessment USA',
   sections:[
     {type:'hero', eyebrow:'Tools · Team Health Snapshot', h:'Where is your team <span class="grad">actually strong?</span>',
       sub:'Rate your team on eight quick statements and see where it stands — and the one dimension worth attention first.'},
@@ -899,7 +899,7 @@ PAGES.push(
   title:'Idea Generator — the right experience for your team · TeamBeam Outings',
   desc:'Tell us your team size, where you want to gather, and what you are trying to do — and get a starting point matched to the goal.',
   ai:'The TeamBeam Idea Generator suggests experience directions based on team size, delivery mode (in-office, away, online) and goal (build trust, improve communication, re-energize, celebrate, onboard, give back).',
-  keywords:'team building ideas India, offsite ideas, team activity suggestions, corporate event ideas',
+  keywords:'team building ideas USA, offsite ideas, team activity suggestions, corporate event ideas',
   sections:[
     {type:'hero', eyebrow:'Tools · Idea Generator', h:'Not sure where to start? <span class="grad">Start here.</span>',
       sub:'Tell us the shape of your team and what you are trying to do, and we will point you to the right kind of experience.'},
@@ -921,12 +921,12 @@ PAGES.push(
 {
   path:'/about', crumb:'About',
   title:'About — one business, two homes, one idea · TeamBeam Outings',
-  desc:'TeamBeam Outings designs, delivers and measures corporate team experiences across India and worldwide, with a home in the USA. Understand the team first; measure what changed.',
-  ai:'TeamBeam Outings is a corporate team-experience company operating as one business with two homes — teambeam.in (India and worldwide) and teambeam.us (USA). It works diagnostic-first and measures outcomes at Day 14, 30 and 60.',
-  keywords:'about TeamBeam, corporate team building company India, team experience company Pune',
+  desc:'TeamBeam Outings designs, delivers and measures corporate team experiences across the USA and worldwide, with a home in India. Understand the team first; measure what changed.',
+  ai:'TeamBeam Outings is a corporate team-experience company operating as one business with two homes — teambeam.us (the USA and worldwide) and teambeam.in (India). It works diagnostic-first and measures outcomes at Day 14, 30 and 60.',
+  keywords:'about TeamBeam, corporate team building company USA, team experience company San Francisco',
   sections:[
     {type:'hero', eyebrow:'About', h:'One business. Two homes. <span class="grad">One idea.</span>',
-      sub:'We design, deliver and measure corporate team experiences — in India and worldwide, with a home in the USA at teambeam.us.',
+      sub:'We design, deliver and measure corporate team experiences — in the USA and worldwide, with a home in India at teambeam.in.',
       cta:`<a class="cta" href="#talk">Talk to us</a><a class="cta cta--ghost" href="/why-teambeam">How we work</a>`},
     {type:'lead', t:'We built TeamBeam because most team events are forgotten by Friday, and nobody can say if they helped. We wanted to do it the other way around — understand the team first, build the day around a real goal, and come back afterwards to see what changed.'},
     {type:'cards', eyebrow:'What makes us us', h:'A few things we do differently.', cols:3,
@@ -934,7 +934,7 @@ PAGES.push(
         {h:'Diagnostic-first',p:'We read the team before we design anything, so the day fits the real gap.'},
         {h:'Measured',p:'We check at Day 14, 30 and 60, so you get proof rather than a memory.'},
         {h:'No forced fun',p:'Calm, real and built for grown-ups. Every minute has a point.'},
-        {h:'One team worldwide',p:'India or the USA, the same practice and the same people, wherever you gather.'}
+        {h:'One team worldwide',p:'The USA or USA, the same practice and the same people, wherever you gather.'}
       ]},
     {type:'cta', h:'Want to work with us?', p:'Tell us what you\u2019re trying to change, and we will take it from there.',
       cta:talkCTA}
@@ -944,8 +944,8 @@ PAGES.push(
   path:'/careers', crumb:'Careers',
   title:'Careers — do work that leaves a team different · TeamBeam Outings',
   desc:'We hire for craft over credentials — facilitators, experience designers and operators who can read a room and pull off a flawless day. See what we look for and how to apply.',
-  ai:'TeamBeam hires facilitators, experience designers, and operations & logistics people, valuing craft over credentials. Candidates apply by email to start@teambeam.in.',
-  keywords:'TeamBeam careers, facilitator jobs India, experience designer, event operations jobs Pune',
+  ai:'TeamBeam hires facilitators, experience designers, and operations & logistics people, valuing craft over credentials. Candidates apply by email to start@teambeam.us.',
+  keywords:'TeamBeam careers, facilitator jobs USA, experience designer, event operations jobs San Francisco',
   sections:[
     {type:'hero', eyebrow:'Careers', h:'Do work that leaves a team <span class="grad">different from how it arrived.</span>',
       sub:'We hire for craft over credentials — people who can read a room, hold a group, and pull off a flawless day.',
@@ -967,8 +967,8 @@ PAGES.push(
   path:'/partnerships', crumb:'Partnerships',
   title:'Partnerships — venues, experiences & specialists · TeamBeam Outings',
   desc:'We work with venues, experience providers and specialists who share our standard. See what we look for in a partner and how to work with us.',
-  ai:'TeamBeam partners with venues, experience providers, specialist facilitators and suppliers who meet its standard of reliability and quality. Partners apply by email to start@teambeam.in.',
-  keywords:'TeamBeam partnerships, venue partner, experience provider, corporate event vendors India',
+  ai:'TeamBeam partners with venues, experience providers, specialist facilitators and suppliers who meet its standard of reliability and quality. Partners apply by email to start@teambeam.us.',
+  keywords:'TeamBeam partnerships, venue partner, experience provider, corporate event vendors USA',
   sections:[
     {type:'hero', eyebrow:'Partners', h:'Great days need <span class="grad">great partners.</span>',
       sub:'Venues, experience providers and specialists who share our standard — measured, reliable, and genuinely good at what they do.',
@@ -976,7 +976,7 @@ PAGES.push(
     {type:'lead', t:'We are selective, because our name is on the day. What we look for is simple: you are excellent at one thing, you are dependable when it matters, and you care about the people in the room as much as we do.'},
     {type:'cards', eyebrow:'Who we work with', h:'Ways to partner.', cols:3,
       cards:[
-        {h:'Venue partners',p:'Spaces and properties across India and worldwide that make an offsite effortless.'},
+        {h:'Venue partners',p:'Spaces and properties across the US and worldwide that make an offsite effortless.'},
         {h:'Experience partners',p:'Providers with a genuinely good activity we can design a real goal into.'},
         {h:'Specialist facilitators',p:'Independent facilitators who deliver to a high, consistent standard.'},
         {h:'Suppliers',p:'Production, travel and logistics partners who make the complex look calm.'}
@@ -989,9 +989,9 @@ PAGES.push(
 {
   path:'/contact', crumb:'Contact',
   title:'Contact — tell us what you\u2019re trying to change · TeamBeam Outings',
-  desc:'Talk to TeamBeam Outings. Email, call, or visit us in Pune — and find our US home at teambeam.us. Tell us the goal, and we will design around it.',
-  ai:'Contact TeamBeam Outings by email (start@teambeam.in), phone (+91 75175 00777), or at Futura, Magarpatta, Hadapsar, Pune 411013. US enquiries: teambeam.us.',
-  keywords:'contact TeamBeam, team building enquiry Pune, corporate offsite contact India',
+  desc:'Talk to TeamBeam Outings. Email, call, or visit us in San Francisco — and find our India home at teambeam.in. Tell us the goal, and we will design around it.',
+  ai:'Contact TeamBeam Outings by email (start@teambeam.us), phone (1 (415) 404-9200), or at 600 California St, 11th Floor, San Francisco, CA 94108. India inquiries: teambeam.in.',
+  keywords:'contact TeamBeam, team building inquiry San Francisco, corporate offsite contact USA',
   sections:[
     {type:'hero', eyebrow:'Contact', h:'Tell us what you\u2019re <span class="grad">trying to change.</span>',
       sub:'Not the activity you want — what you want to be different afterwards. We will take it from there. No hard sell, just a real conversation about your team.'},
@@ -1034,7 +1034,7 @@ PAGES.push(
   title:'Measurement & proof — Day 14, 30 and 60 · TeamBeam Outings',
   desc:'We set a baseline before an experience, then measure again at Day 14, 30 and 60 — so the change is something you can show, not something to take on faith.',
   ai:'TeamBeam measures team health before an experience and again at Day 14, 30 and 60, producing a report that shows what changed and whether it held.',
-  keywords:'measure team building, team building ROI, day 14 30 60, team health measurement India',
+  keywords:'measure team building, team building ROI, day 14 30 60, team health measurement USA',
   sections:[
     {type:'hero', eyebrow:'How we work · Measurement & proof', h:'The part most skip: <span class="grad">we come back.</span>',
       sub:'Most companies run a day and hope it worked. We set a baseline before, then measure again on a fixed schedule — so you get proof rather than a memory.',
@@ -1084,8 +1084,8 @@ PAGES.push(
   path:'/occasions', crumb:'Occasions',
   title:'Occasions — a year-round calendar of reasons to gather · TeamBeam Outings',
   desc:'From new-year resets to year-end celebrations, festivals to appreciation days — a year-round calendar of reasons to bring your team together, framed so everyone feels included.',
-  ai:'TeamBeam Occasions cover the year — festivals of light and colour, appreciation days, women\u2019s day, national and heritage days, new year and year-end — marked inclusively and secularly.',
-  keywords:'corporate occasions calendar India, festival celebration at work, employee appreciation day, year-end party',
+  ai:'TeamBeam Occasions cover the year — festivals of light and color, appreciation days, women\u2019s day, national and heritage days, new year and year-end — marked inclusively and secularly.',
+  keywords:'corporate occasions calendar USA, festival celebration at work, employee appreciation day, year-end party',
   sections:[
     {type:'hero', eyebrow:'Occasions', h:'Mark the moments <span class="grad">that matter.</span>',
       sub:'A year-round calendar of reasons to bring people together — framed so everyone feels included, and run so it means something.',
@@ -1111,7 +1111,7 @@ PAGES.push(
   title:'Volunteer — give back with your team · TeamBeam Outings',
   desc:'Ways for your team to give back — employee volunteering and CSR projects that do real good and produce a report you can file.',
   ai:'TeamBeam runs employee volunteering and give-back projects as part of its Impact & CSR work, producing a filable report.',
-  keywords:'employee volunteering India, corporate volunteering, CSR team activity',
+  keywords:'employee volunteering USA, corporate volunteering, CSR team activity',
   sections:[
     {type:'hero', eyebrow:'Volunteer', h:'Give back — <span class="grad">together.</span>',
       sub:'Bring your team to a project that does real good, and walk away with a report your CSR and ESG teams can file.',
@@ -1124,15 +1124,15 @@ PAGES.push(
   path:'/privacy', crumb:'Privacy',
   title:'Privacy · TeamBeam Outings',
   desc:'How TeamBeam Outings handles the limited personal information you share with us.',
-  ai:'TeamBeam Outings privacy statement: the site collects minimal information; personal data shared by email is used only to respond to enquiries.',
+  ai:'TeamBeam Outings privacy statement: the site collects minimal information; personal data shared by email is used only to respond to inquiries.',
   sections:[
     {type:'hero', eyebrow:'Privacy', h:'Your information, handled simply.',
       sub:'We keep this short because we keep it minimal.'},
     {type:'prose', blocks:[
       {h:'What we collect',p:'This website does not use sign-up forms. If you email or call us, we receive what you choose to share — your name, contact details, and what you tell us about your team. The site may use privacy-respecting analytics to understand traffic; it is not used to track you across the web.'},
-      {h:'How we use it',p:'Only to respond to your enquiry and, if you become a client, to plan and run your experience. We do not sell your information, and we do not share it except with the partners needed to deliver what you have asked for.'},
+      {h:'How we use it',p:'Only to respond to your inquiry and, if you become a client, to plan and run your experience. We do not sell your information, and we do not share it except with the partners needed to deliver what you have asked for.'},
       {h:'Your rights',p:'You can ask us what we hold about you, to correct it, or to delete it. Write to <a href="mailto:'+CFG.email+'">'+CFG.email+'</a> and we will act on it.'},
-      {h:'Retention',p:'We keep enquiry information only as long as needed to help you, then remove it.'},
+      {h:'Retention',p:'We keep inquiry information only as long as needed to help you, then remove it.'},
       {p:LEGAL_UPDATED+' This is a plain-language summary; if you need a formal policy for procurement, write to us and we will provide one.'}
     ]}
   ]
@@ -1161,7 +1161,7 @@ PAGES.push(
     {type:'hero', eyebrow:'Accessibility', h:'Built to be usable by everyone.',
       sub:'We want this site to work well for every visitor, however they browse.'},
     {type:'prose', blocks:[
-      {h:'What we aim for',p:'We build to the WCAG 2.2 AA standard — sufficient colour contrast, full keyboard navigation, visible focus, meaningful structure for screen readers, and text that scales and reflows on any device.'},
+      {h:'What we aim for',p:'We build to the WCAG 2.2 AA standard — sufficient color contrast, full keyboard navigation, visible focus, meaningful structure for screen readers, and text that scales and reflows on any device.'},
       {h:'If something is not working',p:'Accessibility is never finished. If you hit a barrier on this site, please tell us at <a href="mailto:'+CFG.email+'">'+CFG.email+'</a> and we will fix it.'},
       {p:LEGAL_UPDATED}
     ]}
@@ -1192,7 +1192,7 @@ PAGES.push(
 subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-beam-hunts', name:'Beam Hunts', tagline:'city and venue hunts for teams',
   desc:'Beam Hunts — city and venue treasure hunts that get a team moving, thinking and laughing together, designed and measured by TeamBeam.',
   ai:'Beam Hunts are TeamBeam city, venue, themed and virtual treasure hunts that get teams moving and collaborating, suited to breaking silos and welcoming new joiners.',
-  keywords:'corporate treasure hunt India, team scavenger hunt, city hunt team building, office treasure hunt',
+  keywords:'corporate treasure hunt USA, team scavenger hunt, city hunt team building, office treasure hunt',
   eyebrow:'Team Experiences · Beam Hunts', h:'Beam Hunts <span class="grad">get a team moving.</span>',
   sub:'City and venue hunts that get people out of their chairs, mixing across the usual lines, and solving things together.',
   whatH:'The oldest trick, done properly.', what:[
@@ -1200,7 +1200,7 @@ subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-beam-hunts', name:
     'We design the trail around your goal, not a generic route. Whether that is breaking silos, welcoming a new cohort, or just a genuinely good day, the hunt is shaped to produce it.'],
   insideH:'Ways to run a hunt.',
   inside:[
-    {h:'City hunts',p:'A neighbourhood becomes the board — landmarks, clues and local colour.'},
+    {h:'City hunts',p:'A neighbourhood becomes the board — landmarks, clues and local color.'},
     {h:'Venue hunts',p:'Contained to your office, hotel or offsite space when time is tight.'},
     {h:'Themed hunts',p:'Built around a story or your company, for extra hook.'},
     {h:'Virtual hunts',p:'For a distributed team, played live across cities at once.'}],
@@ -1215,7 +1215,7 @@ subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-beam-hunts', name:
 subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-beam-arena', name:'Beam Arena', tagline:'high-energy game shows for teams',
   desc:'Beam Arena — high-energy game shows that light up a full room, from one team to a thousand, designed and measured by TeamBeam.',
   ai:'Beam Arena is TeamBeam\u2019s high-energy game-show format for large groups, kickoffs and celebrations, scalable from one team to over a thousand people.',
-  keywords:'corporate game show India, large group team building, kickoff entertainment, big room team event',
+  keywords:'corporate game show USA, large group team building, kickoff entertainment, big room team event',
   eyebrow:'Team Experiences · Beam Arena', h:'Beam Arena <span class="grad">fills the room.</span>',
   sub:'High-energy game shows that hold a whole hall — buzzers, big screens, and a whole company on its feet.',
   whatH:'Energy that actually scales.', what:[
@@ -1238,7 +1238,7 @@ subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-beam-arena', name:
 subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-beam-mysteries', name:'Beam Mysteries', tagline:'solve-it-together mysteries for teams',
   desc:'Beam Mysteries — solve-it-together mysteries and escape challenges that reward listening and shared decisions, designed and measured by TeamBeam.',
   ai:'Beam Mysteries are TeamBeam murder-mystery and escape-style formats where teams solve a case together, building collaboration, listening and decision-making.',
-  keywords:'murder mystery team building, escape room corporate, problem solving team activity India',
+  keywords:'murder mystery team building, escape room corporate, problem solving team activity USA',
   eyebrow:'Team Experiences · Beam Mysteries', h:'Beam Mysteries <span class="grad">make a team think together.</span>',
   sub:'Solve-it-together mysteries and escape challenges where the only way through is to listen, share and decide as one.',
   whatH:'A puzzle only a team can crack.', what:[
@@ -1261,7 +1261,7 @@ subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-beam-mysteries', n
 subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-beam-makers', name:'Beam Makers', tagline:'build-and-create experiences for teams',
   desc:'Beam Makers — build and create something real together, with something to keep at the end, designed and measured by TeamBeam.',
   ai:'Beam Makers are TeamBeam build-and-create formats (build challenges, art and craft, charity builds) that produce a tangible outcome and reward collaboration.',
-  keywords:'team building make create India, build challenge corporate, art team activity, charity build team',
+  keywords:'team building make create USA, build challenge corporate, art team activity, charity build team',
   eyebrow:'Team Experiences · Beam Makers', h:'Beam Makers <span class="grad">leave something behind.</span>',
   sub:'Build and create something real, together — with a result you can point to at the end.',
   whatH:'The satisfaction of a finished thing.', what:[
@@ -1284,7 +1284,7 @@ subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-beam-makers', name
 subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-high-action-tech', name:'High-action & tech', tagline:'adrenaline and gadget experiences for teams',
   desc:'High-action & tech experiences — adrenaline and gadgets for teams that come alive when the stakes feel real, designed and measured by TeamBeam.',
   ai:'TeamBeam High-action & tech experiences combine outdoor challenges and technology (drones, VR, tech games) for teams energised by real stakes.',
-  keywords:'high energy team building India, adventure corporate activity, tech team building, adrenaline team event',
+  keywords:'high energy team building USA, adventure corporate activity, tech team building, adrenaline team event',
   eyebrow:'Team Experiences · High-action & tech', h:'High-action & tech <span class="grad">for teams that want the stakes.</span>',
   sub:'Adrenaline and gadgets — for teams that come alive when something is genuinely on the line.',
   whatH:'When a real challenge builds real trust.', what:[
@@ -1306,8 +1306,8 @@ subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-high-action-tech',
   related:teRel({h:'Denver &amp; the Rockies',p:'A destination built for adventure experiences.',href:'/destinations-denver',linkText:'Denver'})})),
 subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-rhythm-music', name:'Rhythm & music', tagline:'drumming and music experiences for teams',
   desc:'Rhythm & music experiences — drumming and music-making that get a whole group in sync within minutes, designed and measured by TeamBeam.',
-  ai:'TeamBeam Rhythm & music experiences use drum circles and collaborative music to synchronise large groups quickly and include everyone.',
-  keywords:'drum circle team building India, music team activity, rhythm team building, inclusive team experience',
+  ai:'TeamBeam Rhythm & music experiences use drum circles and collaborative music to synchronize large groups quickly and include everyone.',
+  keywords:'drum circle team building USA, music team activity, rhythm team building, inclusive team experience',
   eyebrow:'Team Experiences · Rhythm & music', h:'Rhythm & music <span class="grad">gets a room in sync.</span>',
   sub:'Drumming and music-making that pull a whole group into time together — within minutes, with no skill required.',
   whatH:'Sync you can hear.', what:[
@@ -1330,7 +1330,7 @@ subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-rhythm-music', nam
 subformat(Object.assign({},TE_PARENT,{slug:'/team-experiences-culinary', name:'Culinary', tagline:'cook-and-eat experiences for teams',
   desc:'Culinary experiences — cook and eat together, the oldest team-building there is, done well and designed for a goal by TeamBeam.',
   ai:'TeamBeam Culinary experiences (cook-offs, team kitchens, mixology) use cooking and eating together to build collaboration and mark celebrations.',
-  keywords:'cooking team building India, corporate cook-off, team kitchen activity, culinary team event',
+  keywords:'cooking team building USA, corporate cook-off, team kitchen activity, culinary team event',
   eyebrow:'Team Experiences · Culinary', h:'Culinary <span class="grad">brings a team to the table.</span>',
   sub:'Cook and eat together — the oldest team-building there is, designed around a real goal and done well.',
   whatH:'Nobody argues at a shared table.', what:[
@@ -1360,7 +1360,7 @@ PAGES.push({
   title:'Insights — the thinking behind the method · TeamBeam Outings',
   desc:'The thinking behind how we work — team health, measurement, roles, moments and the human layer of work. Read in full on teambeam.blog.',
   ai:'TeamBeam publishes insights on team health, measurement, the eight dimensions, roles and moments, and the human layer of work as AI reshapes it. The full articles live on teambeam.blog.',
-  keywords:'team health insights India, team building research, measurement thinking, TeamBeam blog',
+  keywords:'team health insights USA, team building research, measurement thinking, TeamBeam blog',
   sections:[
     {type:'hero', eyebrow:'Insights', h:'The thinking <span class="grad">behind the method.</span>',
       sub:'How we think about team health, measurement, and the human layer of work — for the people who decide. The full pieces live on our knowledge site, teambeam.blog.',
@@ -1379,7 +1379,7 @@ PAGES.push({
     {type:'cards', eyebrow:'For the people who decide', h:'Written to your problem.', cols:3, cards:[
       insCard('For the CXO: the retention math','The recoverable cost hiding off the slide.','/cxo-the-retention-math/'),
       insCard('For the HR leader: proving ROI on culture','Evidence in the room\u2019s own currency.','/hr-proving-roi-of-culture-spend/'),
-      insCard('GCCs: one company, two continents','The seam where a centre is won or lost.','/gccs-one-company-two-continents/')]},
+      insCard('GCCs: one company, two continents','The seam where a center is won or lost.','/gccs-one-company-two-continents/')]},
     {type:'cards', tint:true, eyebrow:'Moments & the human layer', h:'The when, and the why-now.', cols:3, cards:[
       insCard('Onboarding at scale','Making new joiners belong faster.','/onboarding-at-scale-belong-faster/'),
       insCard('Post-merger: two cultures, one team','Dissolving the us-and-them line.','/post-merger-two-cultures-one-team/'),
@@ -1625,18 +1625,18 @@ const wsInd=(a,b)=>[
 PAGES.push(
 wsLeaf({slug:'/who-we-serve-industries-technology', name:'Technology & GCCs',
   title:'Team experiences for technology & GCC teams · TeamBeam Outings',
-  desc:'Team experiences for technology and GCC teams — high-talent, high-mobility groups, and centres that must feel like one company across two continents. By TeamBeam.',
-  ai:'TeamBeam works with technology companies and global capability centres (GCCs), where retention is fragile and delivery depends on psychological safety, building trust, belonging and connection across continents.',
-  keywords:'team building for tech companies India, GCC team building, engineering team offsite, IT team experiences',
+  desc:'Team experiences for technology and GCC teams — high-talent, high-mobility groups, and centers that must feel like one company across two continents. By TeamBeam.',
+  ai:'TeamBeam works with technology companies and global capability centers (GCCs), where retention is fragile and delivery depends on psychological safety, building trust, belonging and connection across continents.',
+  keywords:'team building for tech companies USA, GCC team building, engineering team offsite, IT team experiences',
   eyebrow:'Who it\u2019s for · Technology & GCCs', h:'For teams whose people <span class="grad">can leave tomorrow.</span>',
   sub:'High-talent, high-mobility technology teams — and GCCs that have to feel like one company across two continents.',
   pressH:'Two hard things at once.', press:[
     'Technology teams live with a specific double pressure: skilled people who can change jobs in a single conversation, and work that only goes well when it is safe to be honest — to flag the bug, question the design, admit what you do not know. Retention and delivery both hang on the same soft foundations: trust, belonging and safety.',
-    'For a GCC, add distance. A centre reporting to a parent on another continent has to feel like one company across time zones and cultures, or it quietly becomes a place work is sent to rather than a place decisions are made. That seam is where we do our most valuable work.'],
+    'For a GCC, add distance. A center reporting to a parent on another continent has to feel like one company across time zones and cultures, or it quietly becomes a place work is sent to rather than a place decisions are made. That seam is where we do our most valuable work.'],
   fitH:'What fits a tech or GCC team.',
   fit:[
     {h:'Trust & safety work',p:'The candour that good engineering and honest pipelines depend on.'},
-    {h:'GCC connection',p:'Making the centre feel like one company with the parent, on purpose.'},
+    {h:'GCC connection',p:'Making your capability center in India feel like one company with the parent, on purpose.'},
     {h:'Distributed connection',p:'Building belonging across cities and time zones.'},
     {h:'Retention-focused offsites',p:'A team people would take a pay cut to stay on.'}],
   faq:[{q:'Do you understand the GCC model?',a:'Deeply — it is the story our whole business is built around. A GCC is one company across two continents, which is exactly how we operate ourselves.'},
@@ -1647,7 +1647,7 @@ wsLeaf({slug:'/who-we-serve-industries-financial-services', name:'Financial serv
   title:'Team experiences for financial services teams · TeamBeam Outings',
   desc:'Team experiences for financial services and fintech teams — high-stakes, high-pressure groups where trust and clear decisions matter most. By TeamBeam.',
   ai:'TeamBeam works with financial services and fintech teams, where high pressure and high stakes make trust, clear decision-making and honest communication decisive.',
-  keywords:'team building financial services India, BFSI team offsite, fintech team building, bank team experiences',
+  keywords:'team building financial services USA, BFSI team offsite, fintech team building, bank team experiences',
   eyebrow:'Who it\u2019s for · Financial services', h:'For teams where <span class="grad">the stakes are always high.</span>',
   sub:'Banking, insurance and fintech teams — high-pressure, high-consequence, and utterly dependent on trust and clear decisions.',
   pressH:'Pressure exposes the cracks.', press:[
@@ -1667,7 +1667,7 @@ wsLeaf({slug:'/who-we-serve-industries-healthcare', name:'Healthcare & life scie
   title:'Team experiences for healthcare & life sciences teams · TeamBeam Outings',
   desc:'Team experiences for healthcare and life sciences teams — groups carrying real weight who need genuine recovery, not just a day off. By TeamBeam.',
   ai:'TeamBeam works with healthcare and life sciences teams, focusing on genuine recovery from burnout, trust, and sustaining people who carry heavy responsibility.',
-  keywords:'team building healthcare India, hospital team offsite, pharma team building, life sciences team experiences',
+  keywords:'team building healthcare USA, hospital team offsite, pharma team building, life sciences team experiences',
   eyebrow:'Who it\u2019s for · Healthcare & life sciences', h:'For teams that carry <span class="grad">real weight.</span>',
   sub:'Healthcare and life sciences teams — carrying genuine responsibility, and needing recovery that actually restores.',
   pressH:'Rest is not the same as recovery.', press:[
@@ -1687,7 +1687,7 @@ wsLeaf({slug:'/who-we-serve-industries-manufacturing', name:'Manufacturing',
   title:'Team experiences for manufacturing teams · TeamBeam Outings',
   desc:'Team experiences for manufacturing teams — large, layered groups across shifts and sites, brought together with purpose. By TeamBeam.',
   ai:'TeamBeam works with manufacturing teams — large, multi-shift, multi-site groups — building connection and communication across levels and locations.',
-  keywords:'team building manufacturing India, factory team offsite, plant team building, automotive team experiences',
+  keywords:'team building manufacturing USA, factory team offsite, plant team building, automotive team experiences',
   eyebrow:'Who it\u2019s for · Manufacturing', h:'For teams spread across <span class="grad">shifts and sites.</span>',
   sub:'Large, layered manufacturing teams — across floors, shifts and locations — brought together with purpose.',
   pressH:'Distance runs through the team.', press:[
@@ -1707,7 +1707,7 @@ wsLeaf({slug:'/who-we-serve-industries-media-entertainment', name:'Media & enter
   title:'Team experiences for media & entertainment teams · TeamBeam Outings',
   desc:'Team experiences for media and entertainment teams — creative groups collaborating under constant deadline. By TeamBeam.',
   ai:'TeamBeam works with media and entertainment teams, where creative collaboration under constant deadline strains alignment and trust.',
-  keywords:'team building media India, creative team offsite, entertainment team building, agency team experiences',
+  keywords:'team building media USA, creative team offsite, entertainment team building, agency team experiences',
   eyebrow:'Who it\u2019s for · Media & entertainment', h:'For creative teams <span class="grad">always on a deadline.</span>',
   sub:'Media, entertainment and creative teams — collaborating hard, under constant time pressure, with strong personalities in the mix.',
   pressH:'Creativity needs safety and space.', press:[
@@ -1727,7 +1727,7 @@ wsLeaf({slug:'/who-we-serve-industries-professional-services', name:'Professiona
   title:'Team experiences for professional services teams · TeamBeam Outings',
   desc:'Team experiences for professional services teams — billable, deadline-driven groups that rarely get the time to become a team. By TeamBeam.',
   ai:'TeamBeam works with professional services and consulting teams, where billable pressure leaves little time to build the team itself, straining trust and belonging.',
-  keywords:'team building professional services India, consulting team offsite, law firm team building, advisory team experiences',
+  keywords:'team building professional services USA, consulting team offsite, law firm team building, advisory team experiences',
   eyebrow:'Who it\u2019s for · Professional services', h:'For teams too busy <span class="grad">to become a team.</span>',
   sub:'Consulting, legal and advisory teams — brilliant individuals, billable to the hilt, who rarely get the space to become a real team.',
   pressH:'When every hour is billable.', press:[
@@ -1747,7 +1747,7 @@ wsLeaf({slug:'/who-we-serve-industries-ecommerce-retail', name:'Retail & e-comme
   title:'Team experiences for retail & e-commerce teams · TeamBeam Outings',
   desc:'Team experiences for retail and e-commerce teams — fast-moving, seasonal groups that scale up and need to cohere quickly. By TeamBeam.',
   ai:'TeamBeam works with retail and e-commerce teams, fast-moving and seasonal, helping them onboard and cohere quickly and sustain energy through peaks.',
-  keywords:'team building retail India, e-commerce team offsite, D2C team building, retail team experiences',
+  keywords:'team building retail USA, e-commerce team offsite, D2C team building, retail team experiences',
   eyebrow:'Who it\u2019s for · Retail & e-commerce', h:'For teams that scale up <span class="grad">fast.</span>',
   sub:'Retail, e-commerce and D2C teams — fast-moving, seasonal, and needing to cohere quickly, again and again.',
   pressH:'Speed leaves connection behind.', press:[
@@ -1767,7 +1767,7 @@ wsLeaf({slug:'/who-we-serve-industries-non-profit', name:'Non-profit',
   title:'Team experiences for non-profit teams · TeamBeam Outings',
   desc:'Team experiences for non-profit teams — mission-driven groups doing a lot with a little, who need to protect their people. By TeamBeam.',
   ai:'TeamBeam works with non-profit teams, mission-driven and resource-constrained, focusing on protecting people from burnout while sustaining purpose.',
-  keywords:'team building non profit India, NGO team offsite, mission driven team, non profit team experiences',
+  keywords:'team building non profit USA, NGO team offsite, mission driven team, non profit team experiences',
   eyebrow:'Who it\u2019s for · Non-profit', h:'For teams doing a lot <span class="grad">with a little.</span>',
   sub:'Mission-driven teams — rich in purpose, short on resources, and at real risk of burning out the very people who care most.',
   pressH:'Purpose is not a substitute for care.', press:[
@@ -1790,7 +1790,7 @@ wsLeaf({slug:'/who-we-serve-roles-executives', name:'Executives & boards',
   title:'For CXOs & boards — team health as business risk · TeamBeam Outings',
   desc:'For CXOs and boards — team experiences that treat retention, culture and team health as the business questions they are. By TeamBeam.',
   ai:'TeamBeam works with CXOs and boards, framing team health as a driver of retention and performance, and measuring it so it belongs on the same slide as the numbers.',
-  keywords:'team building for CXOs, executive team health, board culture, retention strategy India',
+  keywords:'team building for CXOs, executive team health, board culture, retention strategy USA',
   eyebrow:'Who it\u2019s for · Executives & boards', h:'The number that\u2019s <span class="grad">never on the slide.</span>',
   sub:'For the people accountable for the whole thing — where team health quietly drives retention, performance and risk.',
   pressH:'The recoverable cost hiding in plain sight.', press:[
@@ -1801,7 +1801,7 @@ wsLeaf({slug:'/who-we-serve-roles-executives', name:'Executives & boards',
     {h:'Leadership team work',p:'The top team whose health cascades to everyone below.'},
     {h:'Retention-focused programs',p:'Addressing the belonging that pay cannot buy.'},
     {h:'Measured proof',p:'A change you can defend to a board, not a feeling.'},
-    {h:'Culture at scale',p:'Moving the whole organisation, not one team.'}],
+    {h:'Culture at scale',p:'Moving the whole organization, not one team.'}],
   faq:[{q:'How do we know it worked?',a:'We measure team health before and weeks after, and hand you a report you can take to the board. Proof is the point.'},
     {q:'Is this a soft cost?',a:'We treat it as a retention and performance lever with a measurable return, precisely so it does not read as soft.'}],
   related:wsInd({h:'For the CXO: the retention math',p:'The number nobody puts on a slide.',href:'/cxo-the-retention-math/',linkText:'Read the insight'},{h:'The leadership team sets the weather',p:'Why the top team matters most.',href:'/the-leadership-team-sets-the-weather/',linkText:'Read the insight'}),
@@ -1810,7 +1810,7 @@ wsLeaf({slug:'/who-we-serve-roles-people-hr', name:'HR & People leaders',
   title:'For HR & People leaders — a program you can defend · TeamBeam Outings',
   desc:'For HR and People leaders — team experiences designed and measured so you can prove the ROI of culture spend. By TeamBeam.',
   ai:'TeamBeam works with HR and People leaders, providing measured team experiences that produce defensible evidence of change for budget reviews and boards.',
-  keywords:'team building for HR India, CHRO culture program, prove ROI team building, people leader tools',
+  keywords:'team building for HR USA, CHRO culture program, prove ROI team building, people leader tools',
   eyebrow:'Who it\u2019s for · HR & People leaders', h:'A program you can <span class="grad">actually defend.</span>',
   sub:'For the People leader asked to justify culture spend in a language finance respects — with tools that were never built to speak it.',
   pressH:'Evidence in the room\u2019s own currency.', press:[
@@ -1830,7 +1830,7 @@ wsLeaf({slug:'/who-we-serve-roles-managers', name:'People managers',
   title:'For people managers — shifting the team you can actually influence · TeamBeam Outings',
   desc:'For people managers — team experiences that move the team you can actually influence, designed around what it needs. By TeamBeam.',
   ai:'TeamBeam works with people managers to develop the team directly in their control, targeting the specific dimension it needs and giving them something concrete to run.',
-  keywords:'team building for managers India, manager team development, first time manager team, people manager tools',
+  keywords:'team building for managers USA, manager team development, first time manager team, people manager tools',
   eyebrow:'Who it\u2019s for · People managers', h:'The team you can <span class="grad">actually influence.</span>',
   sub:'For the manager who cannot change the whole company, but can absolutely change the team in front of them.',
   pressH:'Your circle of real control.', press:[
@@ -1850,7 +1850,7 @@ wsLeaf({slug:'/who-we-serve-roles-chiefs-of-staff-eas', name:'Chiefs of staff & 
   title:'For chiefs of staff & EAs — the whole thing handled · TeamBeam Outings',
   desc:'For chiefs of staff and executive assistants — team experiences and offsites handled end to end, so you can hand it off with confidence. By TeamBeam.',
   ai:'TeamBeam works with chiefs of staff and EAs, handling team experiences and offsites end to end so they can delegate with confidence.',
-  keywords:'offsite planning chief of staff, EA team event India, executive assistant offsite, corporate event handled',
+  keywords:'offsite planning chief of staff, EA team event USA, executive assistant offsite, corporate event handled',
   eyebrow:'Who it\u2019s for · Chiefs of staff & EAs', h:'Hand it off <span class="grad">with confidence.</span>',
   sub:'For the person who ends up owning the offsite — and needs it to be brilliant, without it eating their month.',
   pressH:'The offsite always lands on your desk.', press:[
@@ -1870,7 +1870,7 @@ wsLeaf({slug:'/who-we-serve-roles-employees', name:'Employees',
   title:'For employees — a day that respects your time · TeamBeam Outings',
   desc:'For employees and team members — team experiences that are genuinely good, never forced, and actually worth your time. By TeamBeam.',
   ai:'TeamBeam designs team experiences that respect employees\u2019 time and intelligence, avoiding forced fun and building genuine connection.',
-  keywords:'good team building experience, not forced fun team day, employee team experience India',
+  keywords:'good team building experience, not forced fun team day, employee team experience USA',
   eyebrow:'Who it\u2019s for · Employees', h:'A day that <span class="grad">respects your time.</span>',
   sub:'For the people who will actually be in the room — because the best sign an experience worked is that the team wanted to be there.',
   pressH:'Nobody wants another forced-fun day.', press:[
@@ -1890,7 +1890,7 @@ wsLeaf({slug:'/who-we-serve-moments-onboarding', name:'Onboarding a cohort',
   title:'Onboarding — making new hires belong faster · TeamBeam Outings',
   desc:'For onboarding moments — experiences that help a cohort of new hires belong faster, so they contribute sooner and stay longer. By TeamBeam.',
   ai:'TeamBeam designs onboarding experiences that build belonging for cohorts of new hires, accelerating contribution and improving retention.',
-  keywords:'onboarding team building India, new hire cohort experience, belonging onboarding, remote onboarding',
+  keywords:'onboarding team building USA, new hire cohort experience, belonging onboarding, remote onboarding',
   eyebrow:'Who it\u2019s for · Onboarding', h:'Make new joiners <span class="grad">belong faster.</span>',
   sub:'For the moment a cohort arrives — where the difference between competence and belonging decides who stays.',
   pressH:'The part onboarding forgets.', press:[
@@ -1910,7 +1910,7 @@ wsLeaf({slug:'/who-we-serve-moments-post-merger', name:'Post-merger',
   title:'Post-merger — two cultures, one team · TeamBeam Outings',
   desc:'For post-merger moments — experiences that turn two cultures into one team, on purpose rather than by hope. By TeamBeam.',
   ai:'TeamBeam designs post-merger experiences that dissolve the us-and-them line and build trust and belonging across two merging cultures.',
-  keywords:'post merger integration team India, culture integration, M&A team building, merger offsite',
+  keywords:'post merger integration team USA, culture integration, M&A team building, merger offsite',
   eyebrow:'Who it\u2019s for · Post-merger', h:'Two cultures, <span class="grad">one team.</span>',
   sub:'For the long stretch after a deal closes — when the org chart is merged but the people are still two teams.',
   pressH:'The line the town hall cannot erase.', press:[
@@ -1929,8 +1929,8 @@ wsLeaf({slug:'/who-we-serve-moments-post-merger', name:'Post-merger',
 wsLeaf({slug:'/who-we-serve-moments-restructure-reset', name:'Restructure or reset',
   title:'Restructure or reset — rebuilding after change · TeamBeam Outings',
   desc:'For restructures and resets — experiences that rebuild trust and direction after a change has unsettled everyone. By TeamBeam.',
-  ai:'TeamBeam designs restructure-and-reset experiences that rebuild trust, clarity and direction after organisational change.',
-  keywords:'restructure team building India, reorg reset, change management team, rebuild team after change',
+  ai:'TeamBeam designs restructure-and-reset experiences that rebuild trust, clarity and direction after organizational change.',
+  keywords:'restructure team building USA, reorg reset, change management team, rebuild team after change',
   eyebrow:'Who it\u2019s for · Restructure or reset', h:'Rebuild after <span class="grad">the ground shifted.</span>',
   sub:'For the aftermath of a restructure — when roles have changed, trust is shaken, and the team needs a new footing.',
   pressH:'Change leaves a team unsettled.', press:[
@@ -1950,7 +1950,7 @@ wsLeaf({slug:'/who-we-serve-moments-burnout-recovery', name:'Burnout recovery',
   title:'Burnout recovery — rest that actually restores · TeamBeam Outings',
   desc:'For burnout recovery — experiences that give a depleted team genuine recovery, not just a day off. By TeamBeam.',
   ai:'TeamBeam designs burnout-recovery experiences focused on genuine restoration and psychological safety for depleted teams, not superficial perks.',
-  keywords:'burnout recovery team India, team reset burnout, exhausted team offsite, recovery retreat',
+  keywords:'burnout recovery team USA, team reset burnout, exhausted team offsite, recovery retreat',
   eyebrow:'Who it\u2019s for · Burnout recovery', h:'Rest that <span class="grad">actually restores.</span>',
   sub:'For a team running on empty — where the real need is recovery, and a pizza lunch does not touch it.',
   pressH:'Recovery is not a day off.', press:[
@@ -1970,7 +1970,7 @@ wsLeaf({slug:'/who-we-serve-moments-sales-kickoff', name:'Sales kickoff',
   title:'Sales kickoff — energy that survives past week one · TeamBeam Outings',
   desc:'For sales kickoffs — energy that survives past week one, built on a team worth staying on, and measured. By TeamBeam.',
   ai:'TeamBeam designs sales kickoffs that build durable connection and trust, not just a short-lived motivational spike, and measures whether the lift held.',
-  keywords:'sales kickoff India, SKO event, sales team offsite, kickoff energy that lasts',
+  keywords:'sales kickoff USA, SKO event, sales team offsite, kickoff energy that lasts',
   eyebrow:'Who it\u2019s for · Sales kickoff', h:'Energy that survives <span class="grad">past week one.</span>',
   sub:'For the kickoff that has to do more than light a room for a night — it has to build a team the sellers want to stay on.',
   pressH:'The kickoff high fades fast.', press:[
@@ -1990,7 +1990,7 @@ wsLeaf({slug:'/who-we-serve-moments-annual-retreat', name:'The annual retreat',
   title:'The annual retreat — closer, not more exhausted · TeamBeam Outings',
   desc:'For the annual retreat — a yearly gathering that leaves people closer, not more exhausted, and that you can prove worked. By TeamBeam.',
   ai:'TeamBeam designs annual retreats with a real arc and genuine downtime so teams leave closer rather than exhausted, and measures the outcome.',
-  keywords:'annual retreat India, company offsite, yearly team retreat, annual offsite planning',
+  keywords:'annual retreat USA, company offsite, yearly team retreat, annual offsite planning',
   eyebrow:'Who it\u2019s for · The annual retreat', h:'A retreat that isn\u2019t <span class="grad">exhausting.</span>',
   sub:'For the once-a-year gathering that too often crams so much in that people come back needing a rest from the retreat.',
   pressH:'The retreat that wears people out.', press:[
@@ -2010,7 +2010,7 @@ wsLeaf({slug:'/who-we-serve-moments-distributed-team-connection', name:'Distribu
   title:'Distributed connection — belonging across distance · TeamBeam Outings',
   desc:'For distributed teams — experiences that build belonging and connection across cities and time zones. By TeamBeam.',
   ai:'TeamBeam designs experiences that build connection and belonging for distributed and remote teams, deliberately replacing the accidental bonding co-location provides.',
-  keywords:'distributed team building India, remote team connection, hybrid team experience, virtual team building',
+  keywords:'distributed team building USA, remote team connection, hybrid team experience, virtual team building',
   eyebrow:'Who it\u2019s for · Distributed connection', h:'Belonging built <span class="grad">across distance.</span>',
   sub:'For teams spread across cities and time zones — where the connection a shared office gave for free has to be built on purpose.',
   pressH:'Distance removes the accidental glue.', press:[
@@ -2030,15 +2030,15 @@ wsLeaf({slug:'/who-we-serve-moments-milestone-anniversary', name:'Milestones & a
   title:'Milestones & anniversaries — mark it so it matters · TeamBeam Outings',
   desc:'For milestones and anniversaries — experiences that mark the moment so it means something, not just another party. By TeamBeam.',
   ai:'TeamBeam designs milestone and anniversary experiences that give a moment genuine meaning and shared story, rather than a generic celebration.',
-  keywords:'company anniversary event India, milestone celebration team, founders day, work anniversary',
+  keywords:'company anniversary event USA, milestone celebration team, founders day, work anniversary',
   eyebrow:'Who it\u2019s for · Milestones & anniversaries', h:'Mark it so it <span class="grad">means something.</span>',
   sub:'For the moments worth marking — an anniversary, a milestone, a founding day — done so people feel it, not just attend it.',
   pressH:'A party is not the same as meaning.', press:[
     'A milestone deserves more than a generic party that could be for anyone. The moments that land are the ones built around the actual story — what the team came through, what it achieved, who made it happen — so people leave feeling genuinely proud and part of something, not just fed.',
-    'We design celebrations with meaning at the centre: the shared story, real recognition, and an experience the team will remember, at whatever scale the moment deserves.'],
+    'We design celebrations with meaning at the center: the shared story, real recognition, and an experience the team will remember, at whatever scale the moment deserves.'],
   fitH:'What fits a milestone.',
   fit:[
-    {h:'Story at the centre',p:'Built around what the team actually came through.'},
+    {h:'Story at the center',p:'Built around what the team actually came through.'},
     {h:'Real recognition',p:'Specific and genuine, not a blanket thank-you.'},
     {h:'Celebration at scale',p:'From a team to a whole company, with real production.'},
     {h:'A memory that lasts',p:'A moment people are proud they were part of.'}],
@@ -2052,7 +2052,7 @@ wsLeaf({slug:'/who-we-serve-moments-milestone-anniversary', name:'Milestones & a
 const OR_PARENT={parent:'/offsites-retreats', parentName:'All offsites & retreats'};
 const orRel=(a)=>[
   {h:'All offsites & retreats',p:'The full range of multi-day work.',href:'/offsites-retreats',linkText:'Offsites'},
-  a,{h:'Where we go',p:'Destinations for your offsite, in India and worldwide.',href:'/destinations',linkText:'Destinations'}
+  a,{h:'Where we go',p:'Destinations for your offsite, in the USA and worldwide.',href:'/destinations',linkText:'Destinations'}
 ];
 const BP_PARENT={parent:'/beam-platform', parentName:'The Beam Platform'};
 const bpRel=(a)=>[
@@ -2063,7 +2063,7 @@ PAGES.push(
 subformat(Object.assign({},OR_PARENT,{slug:'/offsites-retreats-team-programs', name:'Team programs', tagline:'a multi-day program built around a real goal',
   desc:'Team programs — a focused multi-day offsite built around what your team actually needs to shift, designed and measured by TeamBeam.',
   ai:'TeamBeam team programs are multi-day offsites designed around a specific team-development goal, with a diagnosis first and measurement after.',
-  keywords:'team offsite program India, multi day team retreat, team development offsite',
+  keywords:'team offsite program USA, multi day team retreat, team development offsite',
   eyebrow:'Offsites · Team programs', h:'A multi-day offsite <span class="grad">with a point.</span>',
   sub:'A focused program built around the specific thing your team needs to shift — not a generic getaway with a workshop bolted on.',
   whatH:'An arc, not an agenda.', what:[
@@ -2086,7 +2086,7 @@ subformat(Object.assign({},OR_PARENT,{slug:'/offsites-retreats-team-programs', n
 subformat(Object.assign({},OR_PARENT,{slug:'/offsites-retreats-executive-experiences', name:'Executive experiences', tagline:'a considered retreat for leadership teams',
   desc:'Executive experiences — a considered, discreet retreat for a leadership team, designed and measured by TeamBeam.',
   ai:'TeamBeam executive experiences are discreet, high-touch retreats for leadership teams, focused on trust, alignment and decisions.',
-  keywords:'executive retreat India, leadership offsite, C-suite team retreat, board offsite',
+  keywords:'executive retreat USA, leadership offsite, C-suite team retreat, board offsite',
   eyebrow:'Offsites · Executive experiences', h:'A retreat that matches <span class="grad">the seriousness of the room.</span>',
   sub:'A considered, discreet offsite for a leadership team — where the setting, the facilitation and the discretion all meet the stakes.',
   whatH:'The top team needs a different kind of care.', what:[
@@ -2109,7 +2109,7 @@ subformat(Object.assign({},OR_PARENT,{slug:'/offsites-retreats-executive-experie
 subformat(Object.assign({},OR_PARENT,{slug:'/offsites-retreats-high-energy-scale', name:'High-energy & scale', tagline:'large offsites, town-halls and celebrations',
   desc:'High-energy & scale — large offsites, town-halls, kickoffs and celebrations that hold a big group together, designed and run by TeamBeam.',
   ai:'TeamBeam high-energy and scale offsites run large gatherings — all-hands, town-halls, sales kickoffs, holiday parties, milestones — that keep a big group energised and connected.',
-  keywords:'large corporate offsite India, all hands event, sales kickoff, company celebration at scale',
+  keywords:'large corporate offsite USA, all hands event, sales kickoff, company celebration at scale',
   eyebrow:'Offsites · High-energy & scale', h:'Make a big group <span class="grad">feel like one team.</span>',
   sub:'Large offsites, all-hands, kickoffs and celebrations — designed and run so hundreds of people feel connected, not just co-located.',
   whatH:'Scale is a design problem.', what:[
@@ -2132,7 +2132,7 @@ subformat(Object.assign({},OR_PARENT,{slug:'/offsites-retreats-high-energy-scale
 subformat(Object.assign({},OR_PARENT,{slug:'/offsites-retreats-sourcing-planning', name:'Sourcing & planning', tagline:'the whole offsite, handled',
   desc:'Sourcing & planning — the venue found, the travel arranged, the run-of-show built, so you can be present with your team. By TeamBeam.',
   ai:'TeamBeam sourcing and planning handles offsite logistics end to end — venue, travel, run-of-show — so internal teams do not have to.',
-  keywords:'offsite planning India, corporate event management, venue sourcing team offsite, offsite logistics',
+  keywords:'offsite planning USA, corporate event management, venue sourcing team offsite, offsite logistics',
   eyebrow:'Offsites · Sourcing & planning', h:'You be present. <span class="grad">We handle the rest.</span>',
   sub:'The venue found, the travel arranged, the run-of-show built — so the person who would normally run the offsite gets to actually take part in it.',
   whatH:'The unglamorous work that makes the day.', what:[
@@ -2163,7 +2163,7 @@ subformat(Object.assign({},BP_PARENT,{slug:'/beam-platform-planning-assistant', 
     'It is the quiet backbone that lets the day feel effortless.'],
   insideH:'What it does.',
   inside:[
-    {h:'Captures the goal',p:'What you want different afterwards, front and centre.'},
+    {h:'Captures the goal',p:'What you want different afterwards, front and center.'},
     {h:'Shapes the brief',p:'Turning a goal into a clear plan.'},
     {h:'Builds the run-of-show',p:'The day sequenced and timed, with contingencies.'},
     {h:'Aligns everyone',p:'One shared plan, so nothing is a surprise.'}],
@@ -2284,7 +2284,7 @@ PAGES.push(
 subformat(Object.assign({},IC_PARENT,{slug:'/impact-csr-beam-green', name:'Beam Green', tagline:'environmental give-back for teams',
   desc:'Beam Green — environmental projects a team can see the result of, from planting to clean-ups to restoration, with a report your CSR and ESG teams can file. By TeamBeam.',
   ai:'Beam Green is TeamBeam\u2019s environmental CSR format: tree planting, restoration, clean-ups and waste projects, delivered with a filable impact report.',
-  keywords:'environmental CSR India, corporate tree planting, beach clean up team, ESG team activity',
+  keywords:'environmental CSR USA, corporate tree planting, beach clean up team, ESG team activity',
   eyebrow:'Impact & CSR · Beam Green', h:'Give back to the planet — <span class="grad">and see the result.</span>',
   sub:'Environmental projects a team can point to afterwards — planting, cleaning, restoring — with a report your CSR and ESG teams can file.',
   whatH:'Real impact, not a token gesture.', what:[
@@ -2307,7 +2307,7 @@ subformat(Object.assign({},IC_PARENT,{slug:'/impact-csr-beam-green', name:'Beam 
 subformat(Object.assign({},IC_PARENT,{slug:'/impact-csr-beam-builds', name:'Beam Builds', tagline:'build for communities, together',
   desc:'Beam Builds — build something a community needs in a single focused day, bonding and giving back at once, with a report to file. By TeamBeam.',
   ai:'Beam Builds is TeamBeam\u2019s build-for-community CSR format: assembling or constructing something a community needs in a day, with an impact report.',
-  keywords:'corporate build project India, community build CSR, assemble donate team, give back team building',
+  keywords:'corporate build project USA, community build CSR, assemble donate team, give back team building',
   eyebrow:'Impact & CSR · Beam Builds', h:'Build something <span class="grad">a community needs.</span>',
   sub:'A team builds or assembles something a community genuinely needs, in a single focused day — bonding and giving back in the same breath.',
   whatH:'The best build serves someone.', what:[
@@ -2330,7 +2330,7 @@ subformat(Object.assign({},IC_PARENT,{slug:'/impact-csr-beam-builds', name:'Beam
 subformat(Object.assign({},IC_PARENT,{slug:'/impact-csr-beam-community', name:'Beam Community', tagline:'hands-on community projects for teams',
   desc:'Beam Community — hands-on community projects matched to your people and your cause, with a report to file. By TeamBeam.',
   ai:'Beam Community is TeamBeam\u2019s community-engagement CSR format: skilling, mentoring, drives and community events matched to a cause, with an impact report.',
-  keywords:'community CSR India, corporate volunteering project, mentoring drive team, social impact team activity',
+  keywords:'community CSR USA, corporate volunteering project, mentoring drive team, social impact team activity',
   eyebrow:'Impact & CSR · Beam Community', h:'Time with a community, <span class="grad">not just for it.</span>',
   sub:'Hands-on community projects — skilling, mentoring, drives, events — matched to your people and a cause you care about.',
   whatH:'The give-back that is about people.', what:[
@@ -2340,7 +2340,7 @@ subformat(Object.assign({},IC_PARENT,{slug:'/impact-csr-beam-community', name:'B
   inside:[
     {h:'Skilling & teaching',p:'Your team sharing what they know with those who can use it.'},
     {h:'Mentoring',p:'Time and guidance for people who benefit from both.'},
-    {h:'Drives & collections',p:'Organising and running a collection for a cause.'},
+    {h:'Drives & collections',p:'Organizing and running a collection for a cause.'},
     {h:'Community events',p:'Putting on an event a community will remember.'}],
   goodH:'When Beam Community fits.', goodLead:'Beam Community is our pick for human, connection-led give-back.',
   good:[
@@ -2353,7 +2353,7 @@ subformat(Object.assign({},IC_PARENT,{slug:'/impact-csr-beam-community', name:'B
 subformat(Object.assign({},IC_PARENT,{slug:'/impact-csr-diy-impact-kits', name:'DIY Impact Kits', tagline:'self-run give-back for distributed teams',
   desc:'DIY Impact Kits — self-run give-back kits for teams who want to do it in their own time, anywhere, with a report to file. By TeamBeam.',
   ai:'TeamBeam DIY Impact Kits are self-run give-back kits shipped to teams, ideal for distributed or remote groups, with guidance and an impact report.',
-  keywords:'DIY CSR kit India, remote volunteering kit, distributed team give back, self run CSR',
+  keywords:'DIY CSR kit USA, remote volunteering kit, distributed team give back, self run CSR',
   eyebrow:'Impact & CSR · DIY Impact Kits', h:'Give back <span class="grad">in your own time.</span>',
   sub:'Self-run give-back kits, shipped to your teams, so a distributed group can do good together without gathering in one place.',
   whatH:'CSR that travels.', what:[
@@ -2376,7 +2376,7 @@ subformat(Object.assign({},IC_PARENT,{slug:'/impact-csr-diy-impact-kits', name:'
 subformat(Object.assign({},SS_PARENT,{slug:'/self-serve-kits-beam-kits', name:'Beam Kits', tagline:'ready-to-run experience kits',
   desc:'Beam Kits — everything for a specific experience, boxed and ready for your own team to run. By TeamBeam.',
   ai:'Beam Kits are TeamBeam ready-to-run experience kits: materials and a guide for a specific team experience, boxed and shipped for internal teams to deliver themselves.',
-  keywords:'team building kit India, ready to run team activity, boxed team experience, self run team building',
+  keywords:'team building kit USA, ready to run team activity, boxed team experience, self run team building',
   eyebrow:'Self-Serve · Beam Kits', h:'Our experience, <span class="grad">boxed and ready.</span>',
   sub:'Everything needed for a specific experience, in a box — so your own people can run a genuinely good session without us in the room.',
   whatH:'Great design, your hands.', what:[
@@ -2399,7 +2399,7 @@ subformat(Object.assign({},SS_PARENT,{slug:'/self-serve-kits-beam-kits', name:'B
 subformat(Object.assign({},SS_PARENT,{slug:'/self-serve-kits-beam-playbook', name:'Beam Playbook', tagline:'the facilitator\u2019s guide',
   desc:'Beam Playbook — the facilitator\u2019s guide to running our experiences well: what to say, when, and why it works. By TeamBeam.',
   ai:'Beam Playbook is TeamBeam\u2019s facilitator guide covering run-of-show, prompts, timing and debrief so internal facilitators can deliver experiences to a high standard.',
-  keywords:'facilitator playbook India, team building facilitation guide, run of show guide, internal facilitation',
+  keywords:'facilitator playbook USA, team building facilitation guide, run of show guide, internal facilitation',
   eyebrow:'Self-Serve · Beam Playbook', h:'What to say, when, <span class="grad">and why it works.</span>',
   sub:'The facilitator\u2019s guide behind our experiences — the run-of-show, the prompts, the timing and the debrief — so your people can deliver to a real standard.',
   whatH:'The craft, written down.', what:[
@@ -2422,7 +2422,7 @@ subformat(Object.assign({},SS_PARENT,{slug:'/self-serve-kits-beam-playbook', nam
 subformat(Object.assign({},SS_PARENT,{slug:'/self-serve-kits-beam-certify', name:'Beam Certify', tagline:'train your own facilitators',
   desc:'Beam Certify — train your own facilitators to deliver TeamBeam experiences to our standard, with ongoing support. By TeamBeam.',
   ai:'Beam Certify is TeamBeam\u2019s facilitator certification program, training internal facilitators to a consistent standard with ongoing support.',
-  keywords:'facilitator certification India, train internal facilitators, team building certification, L&D certification',
+  keywords:'facilitator certification USA, train internal facilitators, team building certification, L&D certification',
   eyebrow:'Self-Serve · Beam Certify', h:'Your facilitators, <span class="grad">to our standard.</span>',
   sub:'Train your own people to deliver our experiences consistently and well — with certification and ongoing support, so quality does not depend on us being in the room.',
   whatH:'Build the capability in-house.', what:[
@@ -2445,7 +2445,7 @@ subformat(Object.assign({},SS_PARENT,{slug:'/self-serve-kits-beam-certify', name
 subformat(Object.assign({},SS_PARENT,{slug:'/self-serve-kits-offsite-in-a-box', name:'Offsite in a box', tagline:'a full day\u2019s structure to run yourself',
   desc:'Offsite in a box — a full day\u2019s structure your team can pick up and run on their own: agenda, activities, materials and debrief included. By TeamBeam.',
   ai:'Offsite in a box is a TeamBeam self-run full-day offsite package: agenda, activities, materials and debrief, designed for teams to deliver themselves.',
-  keywords:'offsite in a box India, run your own offsite, DIY team offsite, self run offsite kit',
+  keywords:'offsite in a box USA, run your own offsite, DIY team offsite, self run offsite kit',
   eyebrow:'Self-Serve · Offsite in a box', h:'A whole offsite, <span class="grad">ready to run.</span>',
   sub:'A full day\u2019s structure your team can pick up and deliver on its own — the agenda, the activities, the materials and the debrief, all designed and packaged.',
   whatH:'The whole day, thought through.', what:[
@@ -2477,7 +2477,7 @@ PAGES.push(
 subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-assessment-led-development', name:'Assessment-led development', tagline:'development built on a reading of the team',
   desc:'Assessment-led development — start from a reading of the team, then design the session around the gap it reveals. By TeamBeam.',
   ai:'TeamBeam assessment-led development reads a team across eight dimensions first, then designs targeted development for the specific gap, and measures the change afterwards.',
-  keywords:'assessment led team development India, diagnostic team development, targeted team training',
+  keywords:'assessment led team development USA, diagnostic team development, targeted team training',
   eyebrow:'Development · Assessment-led', h:'Development that <span class="grad">starts from evidence.</span>',
   sub:'We read where the team actually is, then build the session around the gap that reading reveals — not a stock curriculum.',
   whatH:'Prescribe after examining, not before.', what:[
@@ -2500,7 +2500,7 @@ subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-assessment
 subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-expert-facilitation', name:'Expert facilitation', tagline:'a skilled facilitator for the conversations that matter',
   desc:'Expert facilitation — a skilled, neutral facilitator to hold a hard conversation, align a group, or resolve a conflict, and land it well. By TeamBeam.',
   ai:'TeamBeam expert facilitation provides a skilled neutral facilitator for hard conversations, alignment sessions, conflict resolution and decision workshops.',
-  keywords:'expert facilitation India, team facilitator, meeting facilitation, conflict resolution facilitator',
+  keywords:'expert facilitation USA, team facilitator, meeting facilitation, conflict resolution facilitator',
   eyebrow:'Development · Expert facilitation', h:'The conversation that <span class="grad">needs a steady hand.</span>',
   sub:'Some conversations are too important, or too charged, to run yourself. A skilled, neutral facilitator holds the room so the real thing can be said — and resolved.',
   whatH:'A neutral in the room changes everything.', what:[
@@ -2521,11 +2521,11 @@ subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-expert-fac
     {q:'Can it be a one-off?',a:'Yes. A single well-facilitated session on the right day can shift something months of meetings could not.'}],
   related:dfRel({h:'Leadership team training',p:'Facilitation focused on the top team.',href:'/development-facilitation-leadership-team-training',linkText:'Leadership'})})),
 subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-leadership-team-training', name:'Leadership team training', tagline:'work on the team that sets the weather',
-  desc:'Leadership team training — work on the executive team whose health cascades through the whole organisation. By TeamBeam.',
+  desc:'Leadership team training — work on the executive team whose health cascades through the whole organization. By TeamBeam.',
   ai:'TeamBeam leadership team training develops the executive team\u2019s trust, alignment and decision-making, because its health cascades to every team below it.',
-  keywords:'leadership team development India, executive team training, top team offsite, leadership team building',
+  keywords:'leadership team development USA, executive team training, top team offsite, leadership team building',
   eyebrow:'Development · Leadership team', h:'The team that sets <span class="grad">every other team\u2019s weather.</span>',
-  sub:'The executive team is a team too — usually the least examined, and the most consequential. Whatever is true of it becomes true of the organisation beneath it.',
+  sub:'The executive team is a team too — usually the least examined, and the most consequential. Whatever is true of it becomes true of the organization beneath it.',
   whatH:'Fix the top, and the rest follows.', what:[
     'If the leadership team does not trust each other, their departments will not either. If it reopens every decision, so will every level below. The top team\u2019s trust, alignment and decision-making cascade downward — which makes it the highest-leverage team in the company to work on, and the hardest, because power makes honesty costly.',
     'We work with executive teams the way we work with any team, but with the discretion and skill senior people need to be genuinely exposed without it being used against them.'],
@@ -2534,7 +2534,7 @@ subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-leadership
     {h:'Trust at the top',p:'The safety for senior people to be honest with each other.'},
     {h:'Real alignment',p:'Not alignment in the room and contradiction outside it.'},
     {h:'Decision rights',p:'Who decides what, so the top team stops relitigating.'},
-    {h:'The example they set',p:'Naming the behaviour the rest of the company copies.'}],
+    {h:'The example they set',p:'Naming the behavior the rest of the company copies.'}],
   goodH:'When this matters most.', goodLead:'Leadership team work is our highest-leverage engagement.',
   good:[
     {h:'A newly-formed leadership team',p:'A merger, a reshuffle, or new members joining.'},
@@ -2546,7 +2546,7 @@ subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-leadership
 subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-strategic-workshops', name:'Strategic workshops', tagline:'align a group and leave with decisions that hold',
   desc:'Strategic workshops — align a group around a direction and leave with decisions that stay made. Facilitated by TeamBeam.',
   ai:'TeamBeam strategic workshops align a group around direction and priorities and produce decisions that hold, through structured facilitation.',
-  keywords:'strategy workshop facilitation India, planning offsite, prioritisation workshop, OKR workshop',
+  keywords:'strategy workshop facilitation USA, planning offsite, prioritization workshop, OKR workshop',
   eyebrow:'Development · Strategic workshops', h:'Leave the room <span class="grad">actually decided.</span>',
   sub:'A structured, facilitated session that gets a group aligned around a direction — and produces decisions that stay made, not reopened next week.',
   whatH:'Alignment you can act on.', what:[
@@ -2569,7 +2569,7 @@ subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-strategic-
 subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-professional-excellence', name:'Professional excellence', tagline:'focused skills a team applies next week',
   desc:'Professional excellence — focused, practical skill-building a team applies the next week, not someday. By TeamBeam.',
   ai:'TeamBeam professional excellence sessions build practical team skills — communication, feedback, collaboration, presentation — designed for immediate application.',
-  keywords:'team skills training India, communication skills workshop, feedback training, professional development team',
+  keywords:'team skills training USA, communication skills workshop, feedback training, professional development team',
   eyebrow:'Development · Professional excellence', h:'Skills a team <span class="grad">uses next week.</span>',
   sub:'Focused, practical capability-building — communication, feedback, collaboration — designed to be applied immediately, not filed away.',
   whatH:'Practical, not theoretical.', what:[
@@ -2592,7 +2592,7 @@ subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-profession
 subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-guest-expert-in-residence', name:'Guest expert in residence', tagline:'a specialist voice for real depth',
   desc:'Guest expert in residence — bring in a specialist voice for a session that needs genuine depth. Curated and run by TeamBeam.',
   ai:'TeamBeam brings in guest experts in residence — specialist speakers and practitioners — for sessions needing genuine depth, as keynotes, masterclasses or fireside formats.',
-  keywords:'guest speaker corporate India, expert masterclass team, keynote and workshop, specialist facilitator',
+  keywords:'guest speaker corporate USA, expert masterclass team, keynote and workshop, specialist facilitator',
   eyebrow:'Development · Guest expert', h:'When a session needs <span class="grad">a real specialist.</span>',
   sub:'Some topics deserve a genuine expert. We bring in the right specialist voice and build a session around them, so it is depth with a purpose — not a talk that fades.',
   whatH:'Depth, made useful.', what:[
@@ -2608,7 +2608,7 @@ subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-guest-expe
   good:[
     {h:'A big theme',p:'A shift the team needs to take seriously.'},
     {h:'Fresh credibility',p:'An outside voice that lands what internal ones cannot.'},
-    {h:'A flagship moment',p:'An offsite or event that deserves a memorable centrepiece.'}],
+    {h:'A flagship moment',p:'An offsite or event that deserves a memorable centerpiece.'}],
   faq:[{q:'Do you have the experts, or do we?',a:'We curate and bring the right voice for your goal, and build the session around them. If you have someone in mind, we can work with them too.'},
     {q:'Is it just a talk?',a:'Not if we design it well. We wrap the expert in facilitation so the value outlives the applause.'}],
   related:dfRel({h:'Strategic workshops',p:'Pair expert input with a working session.',href:'/development-facilitation-strategic-workshops',linkText:'Strategic workshops'})}))
@@ -2882,14 +2882,14 @@ const DEEPEN = {
 ],
 '/beam-journeys':[
   {type:'related',eyebrow:'Keep exploring',h:'Plan the journey.',links:[
-    {h:'Destinations',p:'India, nearby Asia and worldwide.',href:'/destinations',linkText:'Where we go'},
+    {h:'Destinations',p:'USA, nearby Asia and worldwide.',href:'/destinations',linkText:'Where we go'},
     {h:'Offsites & Retreats',p:'The whole trip handled end to end.',href:'/offsites-retreats',linkText:'Offsites'},
     {h:'How we work',p:'The place is chosen to serve the goal.',href:'/why-teambeam',linkText:'The method'}]}
 ],
 '/what-we-do':[
   {type:'narrative',eyebrow:'One idea under eight offerings',h:'The format is the easy part.',paras:[
     'Teams rarely drift because they picked the wrong activity. They drift because trust thins, decisions stall, or new people never quite belong. The eight things we run are just different doors into the same work — giving a team what it is actually missing.',
-    'So we do not start from a catalogue. We start from your team, and let the format follow. A hunt, a retreat, a give-back day and a leadership session can each be the right answer, for very different reasons.']},
+    'So we do not start from a catalog. We start from your team, and let the format follow. A hunt, a retreat, a give-back day and a leadership session can each be the right answer, for very different reasons.']},
   {type:'blogmodule',h:'The thinking behind what we do.',links:[{t:'The eight dimensions of a healthy team',href:'/the-eight-dimensions-of-a-healthy-team/'},{t:'Diagnostic-first: design should follow evidence',href:'/diagnostic-first-design-follows-evidence/'}]},
   {type:'related',h:'Where to go next.',links:[
     {h:'How we work',p:'The method that holds all eight offerings up.',href:'/why-teambeam',linkText:'The method'},
