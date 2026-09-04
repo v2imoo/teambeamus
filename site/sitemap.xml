@@ -185,25 +185,40 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/resources-insights"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/resources-insights"/>
   </url>
-  <url><loc>https://teambeam.us/occasions-festival-of-lights</loc>
-    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-festival-of-lights"/>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-festival-of-lights"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-festival-of-lights"/>
+  <url><loc>https://teambeam.us/occasions-winter-holiday-season</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-winter-holiday-season"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-winter-holiday-season"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-winter-holiday-season"/>
   </url>
-  <url><loc>https://teambeam.us/occasions-festival-of-colours</loc>
-    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-festival-of-colours"/>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-festival-of-colours"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-festival-of-colours"/>
+  <url><loc>https://teambeam.us/occasions-fall-gratitude</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-fall-gratitude"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-fall-gratitude"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-fall-gratitude"/>
   </url>
   <url><loc>https://teambeam.us/occasions-new-year</loc>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-new-year"/>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-new-year"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-new-year"/>
   </url>
-  <url><loc>https://teambeam.us/occasions-financial-year-close</loc>
-    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-financial-year-close"/>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-financial-year-close"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-financial-year-close"/>
+  <url><loc>https://teambeam.us/occasions-summer-mid-year</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-summer-mid-year"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-summer-mid-year"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-summer-mid-year"/>
+  </url>
+  <url><loc>https://teambeam.us/occasions-spring-season</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-spring-season"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-spring-season"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-spring-season"/>
+  </url>
+  <url><loc>https://teambeam.us/occasions-heritage-culture-months</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-heritage-culture-months"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-heritage-culture-months"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-heritage-culture-months"/>
+  </url>
+  <url><loc>https://teambeam.us/occasions-national-civic-day</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-national-civic-day"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-national-civic-day"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-national-civic-day"/>
   </url>
   <url><loc>https://teambeam.us/occasions-employee-appreciation</loc>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-employee-appreciation"/>
@@ -214,11 +229,6 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-womens-day"/>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-womens-day"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-womens-day"/>
-  </url>
-  <url><loc>https://teambeam.us/occasions-national-days</loc>
-    <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-national-days"/>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://teambeam.us/occasions-national-days"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://teambeam.us/occasions-national-days"/>
   </url>
   <url><loc>https://teambeam.us/occasions-year-end</loc>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://teambeam.us/occasions-year-end"/>
