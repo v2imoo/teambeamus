@@ -470,7 +470,7 @@ const PAGES = [
       lead:'Whatever seat you sit in, you get a plan shaped around what you are accountable for.',
       cards:[
         {h:'CXOs &amp; boards',p:'Retention, culture, and the health of the teams that carry the business.',link:'/who-we-serve-roles-executives',linkText:'Explore'},
-        {h:'HR &amp; People leaders',p:'A programme you can defend — with a measured change to show for it.',link:'/who-we-serve-roles-people-hr',linkText:'Explore'},
+        {h:'HR &amp; People leaders',p:'A program you can defend — with a measured change to show for it.',link:'/who-we-serve-roles-people-hr',linkText:'Explore'},
         {h:'People managers',p:'The team you can actually influence, and a way to shift it.',link:'/who-we-serve-roles-managers',linkText:'Explore'},
         {h:'Chiefs of staff &amp; EAs',p:'The whole thing handled end to end, so you can hand it off with confidence.',link:'/who-we-serve-roles-chiefs-of-staff-eas',linkText:'Explore'},
         {h:'Employees',p:'A day that respects your people and is genuinely worth their time.',link:'/who-we-serve-roles-employees',linkText:'Explore'}
@@ -686,11 +686,11 @@ const ROITOOL = `
 <section class="strip"><div class="tool" id="roi">
   <div class="tool__form">
     <div class="field"><label for="roi-size">Team size</label><input id="roi-size" type="number" min="1" value="50" inputmode="numeric"></div>
-    <div class="field"><label for="roi-sal">Average annual salary — CTC per person (\u20B9)</label><input id="roi-sal" type="number" min="0" step="50000" value="1200000" inputmode="numeric"></div>
+    <div class="field"><label for="roi-sal">Average annual salary per person ($)</label><input id="roi-sal" type="number" min="0" step="5000" value="90000" inputmode="numeric"></div>
     <div class="field"><label for="roi-attr">Current annual attrition (%)</label><input id="roi-attr" type="number" min="0" max="100" step="1" value="18" inputmode="numeric"></div>
     <div class="field"><label for="roi-eng">Team engagement today</label><select id="roi-eng"><option value="high">Mostly engaged</option><option value="mixed" selected>Mixed</option><option value="low">Largely checked-out</option></select></div>
     <div class="field"><label for="roi-seat">Roles are mostly…</label><select id="roi-seat"><option value="ind">Individual contributors</option><option value="mix" selected>A mix</option><option value="senior">Senior / specialist</option></select></div>
-    <div class="field"><label for="roi-budget">Planned investment per year (\u20B9, optional)</label><input id="roi-budget" type="number" min="0" step="50000" value="500000" inputmode="numeric"></div>
+    <div class="field"><label for="roi-budget">Planned investment per year ($, optional)</label><input id="roi-budget" type="number" min="0" step="5000" value="25000" inputmode="numeric"></div>
   </div>
   <div class="tool__out" id="roi-out" aria-live="polite"></div>
   <details class="tool__assume"><summary>The assumptions behind this</summary><div id="roi-assume"></div></details>
@@ -702,7 +702,7 @@ const ROITOOL = `
   var ids=['roi-size','roi-sal','roi-attr','roi-eng','roi-seat','roi-budget'];
   var el={}; ids.forEach(function(i){el[i]=document.getElementById(i);});
   var out=document.getElementById('roi-out'), asm=document.getElementById('roi-assume');
-  var inr=new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0});
+  var inr=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
   // seniority raises replacement cost; engagement sets the share disengaged and the loss per person
   var REPL={ind:[0.4,0.9],mix:[0.6,1.4],senior:[1.0,2.0]};
   var ENG={high:{share:0.15,loss:[0.10,0.20]},mixed:{share:0.32,loss:[0.14,0.28]},low:{share:0.52,loss:[0.18,0.34]}};
@@ -738,7 +738,7 @@ const ROITOOL = `
     asm.innerHTML='<ul>'
       +'<li><b>Turnover cost.</b> Replacing a departure is widely estimated at roughly half to twice annual salary depending on seniority (recruiting, ramp-up, lost momentum). We use '+(rep[0]*100)+'\u2013'+(rep[1]*100)+'% here.</li>'
       +'<li><b>Disengagement.</b> Engagement research consistently links checked-out employees to materially lower productivity. We assume about '+Math.round(eng.share*100)+'% of a '+ENGLAB[el['roi-eng'].value]+' team is disengaged, each losing '+(eng.loss[0]*100)+'\u2013'+(eng.loss[1]*100)+'% of salary in output.</li>'
-      +'<li><b>Recovery.</b> A measured programme is modelled to recover 5\u201318% of the total. All figures are conservative, adjustable assumptions you can weigh — not published statistics about your company.</li></ul>';
+      +'<li><b>Recovery.</b> A measured program is modeled to recover 5\u201318% of the total. All figures are conservative, adjustable assumptions you can weigh — not published statistics about your company.</li></ul>';
   }
   document.getElementById('roi-copy').addEventListener('click',function(){
     if(!last)return; var b=this;
@@ -898,7 +898,7 @@ PAGES.push(
   path:'/resources-tools-idea-generator', crumb:'Idea Generator',
   title:'Idea Generator — the right experience for your team · TeamBeam Outings',
   desc:'Tell us your team size, where you want to gather, and what you are trying to do — and get a starting point matched to the goal.',
-  ai:'The TeamBeam Idea Generator suggests experience directions based on team size, delivery mode (in-office, away, online) and goal (build trust, improve communication, re-energise, celebrate, onboard, give back).',
+  ai:'The TeamBeam Idea Generator suggests experience directions based on team size, delivery mode (in-office, away, online) and goal (build trust, improve communication, re-energize, celebrate, onboard, give back).',
   keywords:'team building ideas India, offsite ideas, team activity suggestions, corporate event ideas',
   sections:[
     {type:'hero', eyebrow:'Tools · Idea Generator', h:'Not sure where to start? <span class="grad">Start here.</span>',
@@ -1001,7 +1001,7 @@ PAGES.push(
   ]
 });
 
-const LEGAL_UPDATED = 'This statement was last reviewed in ' + new Date().toLocaleDateString('en-IN',{month:'long',year:'numeric'}) + '.';
+const LEGAL_UPDATED = 'This statement was last reviewed in ' + new Date().toLocaleDateString('en-US',{month:'long',year:'numeric'}) + '.';
 PAGES.push(
 {
   path:'/why-teambeam-the-method', crumb:'The method',
@@ -1799,7 +1799,7 @@ wsLeaf({slug:'/who-we-serve-roles-executives', name:'Executives & boards',
   fitH:'What fits an executive agenda.',
   fit:[
     {h:'Leadership team work',p:'The top team whose health cascades to everyone below.'},
-    {h:'Retention-focused programmes',p:'Addressing the belonging that pay cannot buy.'},
+    {h:'Retention-focused programs',p:'Addressing the belonging that pay cannot buy.'},
     {h:'Measured proof',p:'A change you can defend to a board, not a feeling.'},
     {h:'Culture at scale',p:'Moving the whole organisation, not one team.'}],
   faq:[{q:'How do we know it worked?',a:'We measure team health before and weeks after, and hand you a report you can take to the board. Proof is the point.'},
@@ -1807,23 +1807,23 @@ wsLeaf({slug:'/who-we-serve-roles-executives', name:'Executives & boards',
   related:wsInd({h:'For the CXO: the retention math',p:'The number nobody puts on a slide.',href:'/cxo-the-retention-math/',linkText:'Read the insight'},{h:'The leadership team sets the weather',p:'Why the top team matters most.',href:'/the-leadership-team-sets-the-weather/',linkText:'Read the insight'}),
   ctaH:'On the leadership team?'}),
 wsLeaf({slug:'/who-we-serve-roles-people-hr', name:'HR & People leaders',
-  title:'For HR & People leaders — a programme you can defend · TeamBeam Outings',
+  title:'For HR & People leaders — a program you can defend · TeamBeam Outings',
   desc:'For HR and People leaders — team experiences designed and measured so you can prove the ROI of culture spend. By TeamBeam.',
   ai:'TeamBeam works with HR and People leaders, providing measured team experiences that produce defensible evidence of change for budget reviews and boards.',
-  keywords:'team building for HR India, CHRO culture programme, prove ROI team building, people leader tools',
-  eyebrow:'Who it\u2019s for · HR & People leaders', h:'A programme you can <span class="grad">actually defend.</span>',
+  keywords:'team building for HR India, CHRO culture program, prove ROI team building, people leader tools',
+  eyebrow:'Who it\u2019s for · HR & People leaders', h:'A program you can <span class="grad">actually defend.</span>',
   sub:'For the People leader asked to justify culture spend in a language finance respects — with tools that were never built to speak it.',
   pressH:'Evidence in the room\u2019s own currency.', press:[
     'You walk into a budget review with photos, feedback scores, and a real story about a team that came back closer — and it gets waved off. Not because you are wrong, but because it is in a currency the room does not accept. Finance is not against culture; it is against spend it cannot reason about.',
-    'We give you a before, an after, and a change that held a month later — evidence that survives a review. It turns a soft cost into a programme you can defend, and a win you can point to.'],
+    'We give you a before, an after, and a change that held a month later — evidence that survives a review. It turns a soft cost into a program you can defend, and a win you can point to.'],
   fitH:'What fits a People leader.',
   fit:[
-    {h:'Measured programmes',p:'A documented change, not an anecdote.'},
+    {h:'Measured programs',p:'A documented change, not an anecdote.'},
     {h:'Board-ready proof',p:'A curve you can put in front of leadership.'},
     {h:'Diagnostic-first design',p:'Development aimed at the real gap, so it lands.'},
     {h:'A partner who gets it',p:'We think about ROI the way you have to.'}],
   faq:[{q:'Will this help me defend the budget?',a:'That is the point. We produce evidence of change designed to survive a budget review and land with a board.'},
-    {q:'Can you work across many teams?',a:'Yes — from a single team to a company-wide programme, with a consistent way of measuring throughout.'}],
+    {q:'Can you work across many teams?',a:'Yes — from a single team to a company-wide program, with a consistent way of measuring throughout.'}],
   related:wsInd({h:'Proving the ROI of culture spend',p:'The thinking behind this.',href:'/hr-proving-roi-of-culture-spend/',linkText:'Read the insight'},{h:'The ROI calculator',p:'Size the opportunity yourself.',href:'/resources-tools-offsite-roi-calculator',linkText:'Open the tool'}),
   ctaH:'Leading People or HR?'}),
 wsLeaf({slug:'/who-we-serve-roles-managers', name:'People managers',
@@ -2421,7 +2421,7 @@ subformat(Object.assign({},SS_PARENT,{slug:'/self-serve-kits-beam-playbook', nam
   related:ssRel({h:'Beam Certify',p:'Train your facilitators to our standard.',href:'/self-serve-kits-beam-certify',linkText:'Beam Certify'})})),
 subformat(Object.assign({},SS_PARENT,{slug:'/self-serve-kits-beam-certify', name:'Beam Certify', tagline:'train your own facilitators',
   desc:'Beam Certify — train your own facilitators to deliver TeamBeam experiences to our standard, with ongoing support. By TeamBeam.',
-  ai:'Beam Certify is TeamBeam\u2019s facilitator certification programme, training internal facilitators to a consistent standard with ongoing support.',
+  ai:'Beam Certify is TeamBeam\u2019s facilitator certification program, training internal facilitators to a consistent standard with ongoing support.',
   keywords:'facilitator certification India, train internal facilitators, team building certification, L&D certification',
   eyebrow:'Self-Serve · Beam Certify', h:'Your facilitators, <span class="grad">to our standard.</span>',
   sub:'Train your own people to deliver our experiences consistently and well — with certification and ongoing support, so quality does not depend on us being in the room.',
@@ -2439,7 +2439,7 @@ subformat(Object.assign({},SS_PARENT,{slug:'/self-serve-kits-beam-certify', name
     {h:'High-volume needs',p:'Companies running experiences across many teams, often.'},
     {h:'L&D functions',p:'Teams whose job is to develop people internally.'},
     {h:'Consistency at scale',p:'One standard, wherever and whoever delivers.'}],
-  faq:[{q:'How long does certification take?',a:'It depends on the depth you want. We scope a programme to your goals and the number of facilitators.'},
+  faq:[{q:'How long does certification take?',a:'It depends on the depth you want. We scope a program to your goals and the number of facilitators.'},
     {q:'What happens after?',a:'Your facilitators are certified and supported. We stay available for refreshers and new formats.'}],
   related:ssRel({h:'Beam Playbook',p:'The guide your certified facilitators run from.',href:'/self-serve-kits-beam-playbook',linkText:'Beam Playbook'})})),
 subformat(Object.assign({},SS_PARENT,{slug:'/self-serve-kits-offsite-in-a-box', name:'Offsite in a box', tagline:'a full day\u2019s structure to run yourself',
@@ -2486,7 +2486,7 @@ subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-assessment
   insideH:'How it works.',
   inside:[
     {h:'The reading',p:'A structured look at the team across the eight dimensions, before anything is designed.'},
-    {h:'Targeted design',p:'A session built for the specific gap, not a shelf programme.'},
+    {h:'Targeted design',p:'A session built for the specific gap, not a shelf program.'},
     {h:'Facilitated delivery',p:'Run by a facilitator who can hold the real conversation.'},
     {h:'Measured follow-up',p:'A re-read weeks later to confirm what actually changed.'}],
   goodH:'When this fits.', goodLead:'This is our pick when you want development that is aimed, not generic.',
@@ -2603,7 +2603,7 @@ subformat(Object.assign({},DF_PARENT,{slug:'/development-facilitation-guest-expe
     {h:'Keynote + workshop',p:'Inspiration followed by a session that puts it to work.'},
     {h:'Masterclass',p:'A deeper, hands-on session on a specific capability.'},
     {h:'Fireside',p:'A candid conversation with a voice worth hearing.'},
-    {h:'Residency',p:'A specialist embedded across a programme, not just a day.'}],
+    {h:'Residency',p:'A specialist embedded across a program, not just a day.'}],
   goodH:'When to bring one in.', goodLead:'A guest expert is our pick when a topic needs genuine authority.',
   good:[
     {h:'A big theme',p:'A shift the team needs to take seriously.'},
@@ -2969,7 +2969,7 @@ function run(){
   // sitemap / robots / feeds
   const urls = ['/'].concat(PAGES.map(p=>p.path));
   writeFile('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`+
-    urls.map(u=>`  <url><loc>${CFG.origin}${u}</loc>\n    <xhtml:link rel="alternate" hreflang="en-IN" href="${CFG.origin}${u}"/>\n    <xhtml:link rel="alternate" hreflang="en-US" href="${CFG.homes.us}${u}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${CFG.origin}${u}"/>\n  </url>`).join('\n')+`\n</urlset>\n`);
+    urls.map(u=>`  <url><loc>${CFG.origin}${u}</loc>\n    <xhtml:link rel="alternate" hreflang="en-US" href="${CFG.origin}${u}"/>\n    <xhtml:link rel="alternate" hreflang="en-IN" href="${CFG.homes['in']}${u}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${CFG.origin}${u}"/>\n  </url>`).join('\n')+`\n</urlset>\n`);
   writeFile('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${CFG.origin}/sitemap.xml\n`);
   writeFile('_headers', `/*\n  X-Content-Type-Options: nosniff\n  X-Frame-Options: SAMEORIGIN\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: geolocation=(), microphone=(), camera=()\n/assets/*\n  Cache-Control: public, max-age=31536000, immutable\n`);
   writeFile('_redirects', `# URL-preservation redirects go here as pages are added. One hop, 301.\n`);
